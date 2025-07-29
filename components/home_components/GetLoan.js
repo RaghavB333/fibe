@@ -56,8 +56,8 @@ const GetLoan = () => {
   return (
     <div className='px-2 lg:px-8 py-20 lg:py-32 bg-[rgb(244,250,255)]'>
       <div className="text-center">
-        <h2 className="text-2xl lg:text-3xl mb-4 lg:mb-8 font-semibold">How to Get a Personal Loan From Fibe?</h2>
-        <p className="max-w-5xl mx-auto text-base lg:text-xl mb-8 text-[rgb(92,92,92)] font-normal">Borrow and repay on your own 
+        <h2 className="text-2xl lg:text-3xl w-[90%] mx-auto mb-4 lg:mb-8 font-semibold">How to Get a Personal Loan From Fibe?</h2>
+        <p className="max-w-5xl mx-auto leading-8 text-[18px] text-base line lg:text-xl mb-8 text-[rgb(92,92,92)] font-normal">Borrow and repay on your own 
             terms. Effortless application. Takes just minutes to apply. Get instant cash transferred directly to your
             bank account.</p>
         </div>
@@ -78,19 +78,19 @@ const GetLoan = () => {
             </div>
           </div>
           {index != 2 && <div className="w-2 h-full bg-[rgb(7,159,159)] ms-3.5 hidden xl:block"></div>}
-          <div className={`${index != 2 ? "xl:mx-24" : "xl:mx-28"} px-2 text-center xl:text-start each-step `}>
-            <div className="font-semibold text-lg lg:text-xl xl:text-2xl mb-2 lg:mb-4 text-midnight-black/50">
+          <div className={`${index != 2 ? "xl:mx-24" : "xl:mx-28"} px-2 text-center xl:text-start each-step`}>
+            <div className="font-semibold text-[19px] lg:text-xl xl:text-2xl mb-2 lg:mb-4">
               {step.title}
             </div>
-            <p className="text-base lg:text-xl xl:text-xl text-midnight-black/50 font-medium">
+            <p className="text-base leading-7 mx-auto w-[70%] xl:w-full lg:text-xl xl:text-xl text-[rgb(38,38,38)] font-medium">
               {step.description}
             </p>
             <div className="w-full xl:hidden my-5 xl:my-0 bg-[rgb(244,250,255)]">
               <img
                 alt="Fibe personal loan"
                 loading="lazy"
-                width="460"
-                height="460"
+                width="250"
+                height="250"
                 decoding="async"
                 className="mb-8 mx-auto mix-blend-darken"
                 src={step.img}

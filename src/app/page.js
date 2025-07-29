@@ -10,6 +10,10 @@ import Blogs from "@/components/blogs/Blogs";
 import { useState, useEffect } from "react";
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(1);
+  const [videoId, setVideoId] = useState('');
+
+  const [showPlayer, setShowPlayer] = useState(false);
+
 
    useEffect(() => {
     const interval = setInterval(() => {
@@ -28,7 +32,7 @@ export default function Home() {
       <div className="bg-white px-6 lg:px-8 py-20 lg:py-32">
         <div className="text-center">
           <h2 className="text-2xl lg:text-3xl mb-4 lg:mb-8 font-semibold">Loan Calculators</h2>
-          <p className="max-w-5xl mx-auto text-base lg:text-xl mb-8 text-[rgb(92,92,92)] font-normal">Skip the guesswork when it comes to applying for a personal loan. Calculate your EMIs for varying tenures, loan amounts and interest rates with Fibe’s easy-to-use EMI calculator. This can help you choose an EMI that works for you and plan your Fibe Loan better.  You can simply move  the slider left or right to change the values and takes just seconds to calculate.&nbsp;</p>
+          <p className="max-w-5xl leading-8 px-2 mx-auto text-base lg:text-xl mb-8 text-[rgb(92,92,92)] font-normal">Skip the guesswork when it comes to applying for a personal loan. Calculate your EMIs for varying tenures, loan amounts and interest rates with Fibe’s easy-to-use EMI calculator. This can help you choose an EMI that works for you and plan your Fibe Loan better.  You can simply move  the slider left or right to change the values and takes just seconds to calculate.&nbsp;</p>
         </div>
         <LoanCalculator/> 
       </div>
@@ -46,7 +50,7 @@ export default function Home() {
                     <img alt="" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" className="mx-auto mb-1" src="/checkscore.png"></img>
                 </div>
                 <div className="font-semibold text-xl">Credit Score</div>
-                <div className="font-base text-lg leading-6 text-[rgb(153,153,153)] group-hover:text-black font-medium">Check your credit score for free in just 3 minutes</div>
+                <div className="font-base text-lg px-2 leading-6 text-[rgb(153,153,153)] group-hover:text-black font-medium">Check your credit score for free in just 3 minutes</div>
                 <span className="absolute left-0 -bottom-16 w-full h-10 text-[rgb(7,159,159)] font-medium text-xl group-hover:-bottom-14 group-hover:transition-all">Explore</span>
             </div>
         </a>
@@ -56,7 +60,7 @@ export default function Home() {
                     <img alt="" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" className="mx-auto mb-1" src="/coins.png"></img>
                 </div>
                 <div className="font-semibold text-xl">Financial Wellness</div>
-                <div className="font-base text-lg leading-6 text-[rgb(153,153,153)] group-hover:text-black font-medium">Credit affordability for your employees every credit need</div>
+                <div className="font-base text-lg px-2 leading-6 text-[rgb(153,153,153)] group-hover:text-black font-medium">Credit affordability for your employees every credit need</div>
                 <span className="absolute left-0 -bottom-16 w-full h-10 text-[rgb(7,159,159)] font-medium text-xl group-hover:-bottom-14 group-hover:transition-all">Explore</span>
             </div>
         </a>
@@ -66,7 +70,7 @@ export default function Home() {
                     <img alt="" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" className="mx-auto mb-1" src="/calculator.png"></img>
                 </div>
                 <div className="font-semibold text-xl">Eligibility Calculator</div>
-                <div className="font-base text-lg leading-6 text-[rgb(153,153,153)] group-hover:text-black font-medium">Check your eligibility to see how much you can borrow</div>
+                <div className="font-base text-lg px-2 leading-6 text-[rgb(153,153,153)] group-hover:text-black font-medium">Check your eligibility to see how much you can borrow</div>
                 <span className="absolute left-0 -bottom-16 w-full h-10 text-[rgb(7,159,159)] font-medium text-xl group-hover:-bottom-14 group-hover:transition-all">Explore</span>
             </div>
         </a>
@@ -76,7 +80,7 @@ export default function Home() {
                     <img alt="" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" className="mx-auto mb-1" src="/credit-card-icon.png"></img>
                 </div>
                 <div className="font-semibold text-xl">Credit Card</div>
-                <div className="font-base text-lg leading-6 text-[rgb(153,153,153)] group-hover:text-black font-medium">Go numberless with Fibe Axis Bank Card</div>
+                <div className="font-base text-lg px-4 leading-6 text-[rgb(153,153,153)] group-hover:text-black font-medium">Go numberless with Fibe Axis Bank Credit Card</div>
                 <span className="absolute left-0 -bottom-16 w-full h-10 text-[rgb(7,159,159)] font-medium text-xl group-hover:-bottom-14 group-hover:transition-all">Explore</span>
             </div>
         </a>
@@ -95,26 +99,27 @@ export default function Home() {
             <div className="slick-track flex justify-center items-center">
               <div data-index="0" className={`${currentIndex === 0 ? "block" : "hidden"} lg:block w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
                 <div>
-                  <a href="https://www.youtube.com/watch?v=mpBhHNp2qVU" className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
+                  <div onClick={() => setShowPlayer(true)} className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
                     <img alt="Slide 0" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1" src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61963-1.png&w=3840&q=75"></img>
-                  </a>
+                  </div> 
                 </div>
               </div>
               <div data-index="1" className={`${currentIndex === 1 ? "block" : "hidden"} lg:block w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
                 <div>
-                  <a href="https://www.youtube.com/watch?v=CZLWz3uou4U" className="flex justify-center cursor-pointer transition-transform slick-padding  lg:scale-125 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
+                  <div className="flex justify-center cursor-pointer transition-transform slick-padding  lg:scale-125 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
                     <img alt="Slide 1" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1"  src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61956-1.png&w=3840&q=75"></img>
-                  </a>
+                  </div>
                 </div>
               </div>
               <div data-index="2" className={`${currentIndex === 2 ? "block" : "hidden"} lg:block w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
                 <div>
-                  <a href="https://www.youtube.com/watch?v=LiK6zeT6cTo" className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
+                  <div className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
                     <img alt="Slide 2" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1" src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61959.png&w=3840&q=75"></img>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
+             
             <div className="flex justify-center gap-2 lg:hidden">
           {[1,2,3].map((_, index) => (
             <span
@@ -125,17 +130,42 @@ export default function Home() {
             ></span>
           ))}
         </div>
+        {showPlayer &&
+        <div className="fixed inset-0 flex items-center justify-center z-[9999]">
+    <div className="relative w-[90%] max-w-3xl bg-white rounded-lg overflow-hidden">
+      {/* Close Button */}
+      <button
+        onClick={() => setShowPlayer(false)}
+        className="absolute top-2 right-2 text-white p-2 rounded-full z-10"
+      >
+        ✕
+      </button>
+
+      {/* YouTube Player */}
+      <iframe
+        width="100%"
+        height="400"
+        src="https://www.youtube.com/embed/mpBhHNp2qVU?autoplay=1"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        className="w-full"
+      ></iframe>
+    </div>
+  </div>
+        }
           </div>
         </div>
       </div>
     </section>
 
     <div className="bg-white">
-        <div className="my-10 bg-[#fff5f8] flex flex-col items-center justify-center py-14 space-y-8">
-          <h1 className="text-3xl font-semibold">
+        <div className="my-10 bg-[#fff5f8] flex flex-col items-center justify-center py-14 space-y-4 lg:space-y-8">
+          <h1 className="text-2xl lg:text-3xl font-semibold">
             Awards and Achievements
           </h1>
-          <div className="text-xl text-gray-500 max-w-6xl mx-auto px-4 leading-relaxed text-center">
+          <div className="lg:text-xl text-gray-500 max-w-6xl mx-auto px-4 leading-8 lg:leading-relaxed text-center">
             The industry recognises us as much as our customers love us! And so, Fibe has been featured in multiple leading publications, documenting our efforts in making credit accessible to you!
           </div>
           <div className="grid grid-cols-2 gap-4 px-6 lg:flex lg:gap-10 lg:px-14 ">

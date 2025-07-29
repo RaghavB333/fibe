@@ -3,7 +3,7 @@ import React from 'react'
 const Reviews = () => {
     return (
         <div className='bg-white w-[100vw] mb-10'>
-            <h1 className='my-14 text-3xl font-semibold  text-center'>
+            <h1 className='my-14 text-2xl px-4 lg:text-3xl font-semibold  text-center'>
                 Here's what our customers think of us!
             </h1>
             <div className='mx-auto flex max-lg:flex-col justify-center items-stretch lg:w-[94%] gap-10'>

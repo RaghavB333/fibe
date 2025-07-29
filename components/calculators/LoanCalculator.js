@@ -136,7 +136,7 @@ const LoanCalculator = () => {
                       ₹{monthlyInstalment}
                     </div>
                   </div>
-                  <div className="inline-grid grid-cols-4 justify-between items-start w-full gap-2 p-4 [&>*]:mb-2 bg-sky-blue lg:bg-white">
+                  <div className="inline-grid grid-cols-4 justify-between items-start w-full gap-2 p-4 [&>*]:mb-2 bg-[rgb(244,250,255)] lg:bg-white">
                     <div className="col-span-3 text-base text-[rgb(153,153,153)] font-medium">
                       Total interest
                     </div>

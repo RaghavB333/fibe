@@ -3,11 +3,11 @@ const Blogs = () => {
     return (
         <div className='items-center mb-20 flex flex-col mt-32'>
 
-            <h1 className='text-3xl font-semibold text-center mb-10'>
+            <h1 className='text-2xl lg:text-3xl font-bold lg:font-semibold text-center mb-10'>
                 Fibe Blogs
             </h1>
-            <div className='flex max-lg:flex-col px-10 gap-8 mb-10'>
-                <div className=' flex flex-col max-lg:w-full  w-[45vw] border border-gray-300 hover:border-[#079f9f] rounded-lg h-full p-5'>
+            <div className='flex max-lg:flex-col px-6 lg:px-10 gap-4 lg:gap-8 mb-10'>
+                <div className=' flex flex-col max-lg:w-full w-[90%]  lg:w-[45vw] border border-gray-300 hover:border-[#079f9f] rounded-lg h-full p-5'>
                     <img width={450} height={450} className='object-cover h-full w-full max-lg:h-64 lg:max-h-[320px] rounded-lg' src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2025%2F04%2FWhat-is-a-Pension-Plan-and-How-It-Works.jpg&w=384&q=100" alt="" />
                     <div className='flex gap-4 items-center mt-1 lg:ml-4'>
                         <div className='text-[#079f9f] font-[550]'>Banking</div>
@@ -79,7 +79,7 @@ const Blogs = () => {
                 </div>
             </div>
             <div>
-                <button className='bg-[#079f9f] hover:bg-[#038787] flex justify-center items-center max-lg:w-[50vw] w-[25vw] h-16 text-white font-semibold rounded-lg text-xl mt-5 hover:cursor-pointer'>
+                <button className='bg-[#079f9f] hover:bg-[#038787] flex justify-center items-center max-lg:w-[65vw] w-[23vw] h-14 lg:h-16 text-white font-semibold rounded-lg text-xl mt-5 hover:cursor-pointer'>
                     Explore all blogs
                 </button>
             </div>

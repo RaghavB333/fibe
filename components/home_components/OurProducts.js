@@ -7,7 +7,7 @@ const OurProducts = () => {
         <h2 className="text-2xl lg:text-3xl mb-4 lg:mb-8 font-semibold">
           Our Products
         </h2>
-        <p className="max-w-5xl mx-auto text-base lg:text-xl mb-8 text-[rgb(92,92,92)] font-normal">
+        <p className="max-w-5xl leading-8 px-5 mx-auto text-base lg:text-xl mb-8 text-[rgb(92,92,92)] font-normal">
           One solution for all life’s big and small upgrades. From planning your
           dream birthday trip to learning a new skill, you can do it all with a
           Fibe loan. It’s quick, safe and simple. The best part? You can sort
