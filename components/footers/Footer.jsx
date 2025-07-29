@@ -368,8 +368,8 @@ const Footer = () => {
 
 
                 {/* last section */}
-                <div className='bg-[#323232] rounded-lg mt-[40px] h-full px-10 py-5 mb-32 max-lg:mb-72`'>
-                    <div className='text-center text-lg'>
+                <div className='bg-[#323232] rounded-lg mt-[40px] h-full px-4 py-4 lg:py-6 lg:text-center mb-32 max-lg:mb-72`'>
+                    <div className='text-xs lg:text-lg'>
                         FIBE is a registered trademark owned by Social Worth Technologies Private Limited and has licensed the same to Earlysalary Services Private Limited (Formerly known as Ashish Securities Private Limited), a wholly-owned subsidiary.
                     </div>
                 </div>
