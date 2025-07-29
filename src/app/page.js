@@ -86,36 +86,36 @@ export default function Home() {
 
     <section className="px-6 lg:px-8 py-20 lg:py-32 bg-white">
       <div className="text-center">
-        <h2 className="text-2xl lg:text-3xl lg:mb-8 font-semibold">Why choose Fibe?</h2>
-        <p className="max-w-5xl mx-auto text-base lg:text-xl mb-24 lg:mb-20 text-sub-grey font-normal">Handle all your last-minute expenses like a pro with Fibe's Instant Personal Loan. Get finance any time and  repay at your convenience.</p>
+        <h2 className="text-2xl lg:text-3xl mb-3 lg:mb-8 font-semibold">Why choose Fibe?</h2>
+        <p className="max-w-5xl mx-auto text-base lg:text-xl mb-8 lg:mb-20 text-sub-grey font-normal">Handle all your last-minute expenses like a pro with Fibe's Instant Personal Loan. Get finance any time and  repay at your convenience.</p>
       </div>
       <div className="container mx-auto">
         <div className="slick-slider custom-slider slick-initialized">
           <div className="slick-list">
             <div className="slick-track flex justify-center items-center">
-              <div data-index="0" className={`absolute transition-transform duration-[2s] ease-in-out ${currentIndex === 0 ? "-translate-x-[700px]" : "translate-x-0"} lg:static lg:translate-x-0 w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
+              <div data-index="0" className={`${currentIndex === 0 ? "block" : "hidden"} lg:block w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
                 <div>
-                  <div className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
+                  <a href="https://www.youtube.com/watch?v=mpBhHNp2qVU" className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
                     <img alt="Slide 0" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1" src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61963-1.png&w=3840&q=75"></img>
-                  </div>
+                  </a>
                 </div>
               </div>
-              <div data-index="1" className={`absolute transition-transform duration-[2s] ease-in-out ${currentIndex === 1 ? "-translate-x-[700px]" : "translate-x-0"} lg:static lg:translate-x-0 w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
+              <div data-index="1" className={`${currentIndex === 1 ? "block" : "hidden"} lg:block w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
                 <div>
-                  <div className="flex justify-center cursor-pointer transition-transform slick-padding  lg:scale-125 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
+                  <a href="https://www.youtube.com/watch?v=CZLWz3uou4U" className="flex justify-center cursor-pointer transition-transform slick-padding  lg:scale-125 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
                     <img alt="Slide 1" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1"  src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61956-1.png&w=3840&q=75"></img>
-                  </div>
+                  </a>
                 </div>
               </div>
-              <div data-index="2" className={`absolute transition-transform duration-[2s] ease-in-out ${currentIndex === 2 ? "-translate-x-[700px]" : "translate-x-0"} lg:static lg:translate-x-0 w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
+              <div data-index="2" className={`${currentIndex === 2 ? "block" : "hidden"} lg:block w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
                 <div>
-                  <div className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
+                  <a href="https://www.youtube.com/watch?v=LiK6zeT6cTo" className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
                     <img alt="Slide 2" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1" src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61959.png&w=3840&q=75"></img>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
-            <div className="flex justify-center mt-28 gap-2 lg:hidden">
+            <div className="flex justify-center gap-2 lg:hidden">
           {[1,2,3].map((_, index) => (
             <span
               key={index}

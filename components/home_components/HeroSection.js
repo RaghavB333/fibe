@@ -17,7 +17,7 @@ const HeroSection = () => {
       <div className='flex flex-col flex-wrap gap-y-2 lg:gap-y-4 justify-center items-center h-[80%] mx-3'>
             <h1 className='text-2xl lg:text-6xl font-semibold'>Lightning-fast upgrades with</h1>
             <span className=' text-2xl md:text-5xl font-bold text-[rgb(248,166,63)]'>{text[index]}</span>
-            <div className='text-[18px] md:text-3xl mt-1.5 lg:mt-3 flex items-center gap-2'>Fibe <p className='w-5 h-[2px] bg-black'></p> finance simplified unlike ever before!</div>
+            <div className='text-[16px] md:text-3xl mt-1.5 lg:mt-3 flex items-center gap-2'>Fibe<p className='w-2 lg:w-5 h-[2px] p-0 m-0 bg-black'></p>finance simplified unlike ever before!</div>
             <ul className='flex flex-wrap items-center justify-center text-sm lg:text-[18px] mt-1.5 lg:mt-4 text-gray-700 lg:divide-x divide-[rgb(229,231,235)]'>
                 <li className='py-1 px-4'>Cash-in-bank in minutes</li>
                 <li className='py-1 px-4'>Fastest loan processing</li>
