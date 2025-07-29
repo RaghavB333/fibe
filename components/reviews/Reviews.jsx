@@ -26,7 +26,7 @@ const Reviews = () => {
                     <div className='ml-6 mr-6 text-gray-700 text-lg  max-lg:text-center'>
                         I would like to thank Fibe (EarlySalary), few days back I met with an accident and I didn&apos;t have much money to pay in one go. So, I took an instant cash advance from Fibe (EarlySalary). They helped me to clear all the medical bills in just 10 mins!
                     </div>
-                    <div className=' max-lg:flex-col flex  ml-6 mt-4 mb-6 max-lg:items-center max-lg:justify-center items-center gap-2'>
+                    <div className=' max-lg:flex-col flex  lg:ml-6 mt-4 mb-6 max-lg:items-center max-lg:justify-center items-center gap-2'>
                         <img src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FMask-group-13.jpg&w=3840&q=75" alt="profile-pic" />
                         <span className='text-lg font-[600]'>Subham Pawar</span>
                     </div>
@@ -53,7 +53,7 @@ const Reviews = () => {
                     <div className='ml-6 mr-6 text-gray-700 text-lg  max-lg:text-center'>
                         The overall experience with Fibe was really good. I applied for an online personal loan and the service was very quick. The entire process was fast and smooth, and the loan was sanctioned without any hassles.
                     </div>
-                    <div className=' max-lg:flex-col flex ml-6 mt-4 mb-6 max-lg:items-center max-lg:justify-center items-center gap-2'>
+                    <div className=' max-lg:flex-col flex lg:ml-6 mt-4 mb-6 max-lg:items-center max-lg:justify-center items-center gap-2'>
                         <img src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FMask-group-14.jpg&w=3840&q=75" alt="profile-pic" />
                         <span className='text-lg font-[600]'>Subham Pawar</span>
                     </div>
