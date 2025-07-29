@@ -4,15 +4,12 @@ import Wave from "../../components/home_components/Wave";
 import OurProducts from "../../components/home_components/OurProducts";
 import GetLoan from "../../components/home_components/GetLoan";
 import LoanCalculator from "../../components/calculators/LoanCalculator";
+import Reviews from "@/components/reviews/Reviews";
+import DownloadApp from "@/components/downloadApp/DownloadApp";
+import Blogs from "@/components/blogs/Blogs";
 import { useState, useEffect } from "react";
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(1);
-
-//   const slides = [
-//   'https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61963-1.png&w=3840&q=75',
-//   'https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61956-1.png&w=3840&q=75',
-//   'https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61959.png&w=3840&q=75',
-// ];
 
    useEffect(() => {
     const interval = setInterval(() => {
@@ -22,6 +19,7 @@ export default function Home() {
   }, []);
 
   return (
+    <div className='mt-12 lg:mt-28 bg-white'>
     <div className="overflow-x-hidden">
       <HeroSection/>
       <Wave/>
@@ -95,21 +93,21 @@ export default function Home() {
         <div className="slick-slider custom-slider slick-initialized">
           <div className="slick-list">
             <div className="slick-track flex justify-center items-center">
-              <div data-index="0" className={`absolute transition-transform duration-[2s] ease-in-out ${currentIndex === 0 ? "translate-x-0" : "-translate-x-[700px]"} lg:static lg:translate-x-0 w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
+              <div data-index="0" className={`absolute transition-transform duration-[2s] ease-in-out ${currentIndex === 0 ? "-translate-x-[700px]" : "translate-x-0"} lg:static lg:translate-x-0 w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
                 <div>
                   <div className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
                     <img alt="Slide 0" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1" src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61963-1.png&w=3840&q=75"></img>
                   </div>
                 </div>
               </div>
-              <div data-index="1" className={`absolute transition-transform duration-[2s] ease-in-out ${currentIndex === 1 ? "translate-x-0" : "-translate-x-[700px]"} lg:static lg:translate-x-0 w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
+              <div data-index="1" className={`absolute transition-transform duration-[2s] ease-in-out ${currentIndex === 1 ? "-translate-x-[700px]" : "translate-x-0"} lg:static lg:translate-x-0 w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
                 <div>
                   <div className="flex justify-center cursor-pointer transition-transform slick-padding  lg:scale-125 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
                     <img alt="Slide 1" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1"  src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61956-1.png&w=3840&q=75"></img>
                   </div>
                 </div>
               </div>
-              <div data-index="2" className={`absolute transition-transform duration-[2s] ease-in-out ${currentIndex === 2 ? "translate-x-0" : "-translate-x-[700px]"} lg:static lg:translate-x-0 w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
+              <div data-index="2" className={`absolute transition-transform duration-[2s] ease-in-out ${currentIndex === 2 ? "-translate-x-[700px]" : "translate-x-0"} lg:static lg:translate-x-0 w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
                 <div>
                   <div className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
                     <img alt="Slide 2" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1" src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61959.png&w=3840&q=75"></img>
@@ -131,6 +129,32 @@ export default function Home() {
         </div>
       </div>
     </section>
+
+    <div className="bg-white">
+        <div className="my-10 bg-[#fff5f8] flex flex-col items-center justify-center py-14 space-y-8">
+          <h1 className="text-3xl font-semibold">
+            Awards and Achievements
+          </h1>
+          <div className="text-xl text-gray-500 max-w-6xl mx-auto px-4 leading-relaxed text-center">
+            The industry recognises us as much as our customers love us! And so, Fibe has been featured in multiple leading publications, documenting our efforts in making credit accessible to you!
+          </div>
+          <div className="grid grid-cols-2 gap-4 px-6 lg:flex lg:gap-10 lg:px-14 ">
+            <img width={200} height={100} src="https://www.fibe.in/_next/image/?url=%2Fawards%2Faward-1.jpg&w=640&q=75" alt="" />
+            <img width={200} height={100} src="https://www.fibe.in/_next/image/?url=%2Fawards%2Faward-2.jpg&w=640&q=75" alt="" />
+            <img width={200} height={100} src="https://www.fibe.in/_next/image/?url=%2Fawards%2Faward-3.jpg&w=640&q=75" alt="" />
+            <img width={200} height={100} src="https://www.fibe.in/_next/image/?url=%2Fawards%2Faward-4.jpg&w=640&q=75" alt="" />
+            <img width={200} height={100} src="https://www.fibe.in/_next/image/?url=%2Fawards%2Faward-5.jpg&w=640&q=75" alt="" />
+            <img width={200} height={100} src="https://www.fibe.in/_next/image/?url=%2Fawards%2Faward-6.jpg&w=640&q=75" alt="" />
+            
+
+          </div>
+        </div>
+        <Reviews />
+        <DownloadApp />
+        <Blogs />
+      </div>
+
+    </div>
     </div>
   );
 }

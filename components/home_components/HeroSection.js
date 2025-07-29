@@ -13,7 +13,7 @@ const HeroSection = () => {
   }, [index]);
 
   return (
-    <div className='flex justify-center items-center bg-gradient-to-t from-[#EBFFFF91] to-[FFF3F78F] h-[500px] w-screen'>
+    <div className='flex justify-center items-center z-50 bg-gradient-to-t from-[#EBFFFF91] to-[FFF3F78F] h-[500px] w-screen'>
       <div className='flex flex-col flex-wrap gap-y-2 lg:gap-y-4 justify-center items-center h-[80%] mx-3'>
             <h1 className='text-2xl lg:text-6xl font-semibold'>Lightning-fast upgrades with</h1>
             <span className=' text-2xl md:text-5xl font-bold text-[rgb(248,166,63)]'>{text[index]}</span>
