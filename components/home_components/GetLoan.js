@@ -1,7 +1,7 @@
 "use client";
 import React from 'react'
 import { useEffect, useRef, useState } from 'react';
-const GetLoan = () => {
+const GetLoan = ({steps, title, description, bgcolor}) => {
     const stepsRef = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -35,31 +35,11 @@ const GetLoan = () => {
     };
   }, []);
 
-    const steps = [
-    {
-      title: 'Online application',
-      description: 'Download the Fibe App and provide a few basic details to initiate the application process.',
-      img: '/f01.jpeg',
-    },
-    {
-      title: 'Instant approval',
-      description: 'You can complete the verification process by uploading some basic documents.',
-      img: '/f02.jpeg',
-    },
-    {
-      title: 'Cash-in-bank in minutes',
-      description: 'Select the amount to be transferred directly to your bank account.',
-      img: '/f03.jpeg',
-    },
-  ];
-
   return (
-    <div className='px-2 lg:px-8 py-20 lg:py-32 bg-[rgb(244,250,255)]'>
+    <div className={`px-2 lg:px-8 py-20 lg:py-32 ${bgcolor ? "bg-bgcolor" : "bg-[rgb(244,250,255)]"}`}>
       <div className="text-center">
-        <h2 className="text-2xl lg:text-3xl w-[90%] mx-auto mb-4 lg:mb-8 font-semibold">How to Get a Personal Loan From Fibe?</h2>
-        <p className="max-w-5xl mx-auto leading-8 text-[18px] text-base line lg:text-xl mb-8 text-[rgb(92,92,92)] font-normal">Borrow and repay on your own 
-            terms. Effortless application. Takes just minutes to apply. Get instant cash transferred directly to your
-            bank account.</p>
+        <h2 className="text-2xl lg:text-3xl w-[90%] mx-auto mb-4 lg:mb-8 font-semibold">{title}</h2>
+        <p className="max-w-5xl mx-auto leading-8 text-[18px] text-base line lg:text-xl mb-8 text-[rgb(92,92,92)] font-normal">{description}</p>
         </div>
         <div className='mt-16'>
             <div className='mx-auto w-5/6 xl:w-11/12 2xl:w-3/4 xl:flex justify-between relative'>
@@ -77,7 +57,7 @@ const GetLoan = () => {
               <div className={`rounded-full ${activeIndex === index ? "bg-[rgb(7,159,159)]":"bg-[rgb(230,230,230)]"} w-full h-full`}></div>
             </div>
           </div>
-          {index != 2 && <div className="w-2 h-full bg-[rgb(7,159,159)] ms-3.5 hidden xl:block"></div>}
+          {index != 2 && <div className="w-2 h-full bg-[rgb(7,159,159)] ms-3.5 hidden xl:block border border-[rgb(7,159,159)]"></div>}
           <div className={`${index != 2 ? "xl:mx-24" : "xl:mx-28"} px-2 text-center xl:text-start each-step`}>
             <div className="font-semibold text-[19px] lg:text-xl xl:text-2xl mb-2 lg:mb-4">
               {step.title}
@@ -85,7 +65,7 @@ const GetLoan = () => {
             <p className="text-base leading-7 mx-auto w-[70%] xl:w-full lg:text-xl xl:text-xl text-[rgb(38,38,38)] font-medium">
               {step.description}
             </p>
-            <div className="w-full xl:hidden my-5 xl:my-0 bg-[rgb(244,250,255)]">
+            <div className={`w-full xl:hidden my-5 xl:my-0 ${bgcolor ? "bg-bgcolor" : "bg-[rgb(244,250,255)]"}`}>
               <img
                 alt="Fibe personal loan"
                 loading="lazy"
@@ -101,7 +81,7 @@ const GetLoan = () => {
       ))}
                 </ul>
             </div>
-            <div className={`xl:w-2/5 hidden xl:block bg-[rgb(244,250,255)] ${activeIndex == 1 && "fixed top-20 right-20"} ${activeIndex == 2 && "absolute top-36 right-0 w-full"}`}>
+            <div className={`xl:w-2/5 hidden xl:block ${bgcolor ? "bg-bgcolor" : "bg-[rgb(244,250,255)]"} ${activeIndex == 1 && "fixed top-20 right-20"} ${activeIndex == 2 && "absolute top-36 right-0 w-full"}`}>
                 <img alt="Fibe personal loan and instant cash loan app" loading="lazy" width="460" height="460" decoding="async" data-nimg="1" className="mb-8 mx-auto mix-blend-darken" src={`${steps[activeIndex].img}`}></img>
             </div>
             </div>

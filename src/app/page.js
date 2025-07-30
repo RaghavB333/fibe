@@ -16,6 +16,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import Popup from "@/components/popup/Popup";
 
 
 export default function Home() {
@@ -25,6 +26,27 @@ export default function Home() {
   const [showPlayer, setShowPlayer] = useState(false);
 
   const [animateIn, setAnimateIn] = useState(false);
+
+    const LoanSectionTitle = "How to Get a Personal Loan From Fibe?";
+    const LoanSectionDescription = "Borrow and repay on your own terms. Effortless application. Takes just minutes to apply. Get instant cash transferred directly to your bank account.";
+
+    const steps = [
+    {
+      title: 'Online application',
+      description: 'Download the Fibe App and provide a few basic details to initiate the application process.',
+      img: '/f01.jpeg',
+    },
+    {
+      title: 'Instant approval',
+      description: 'You can complete the verification process by uploading some basic documents.',
+      img: '/f02.jpeg',
+    },
+    {
+      title: 'Cash-in-bank in minutes',
+      description: 'Select the amount to be transferred directly to your bank account.',
+      img: '/f03.jpeg',
+    },
+  ];
 
   const handleOpen = () => {
     setShowPlayer(true);
@@ -52,7 +74,7 @@ export default function Home() {
       <HeroSection/>
       <Wave/>
       <OurProducts/>
-      <GetLoan/>
+      <GetLoan steps={steps} title={LoanSectionTitle} description={LoanSectionDescription}/>
       <div className="bg-white px-6 lg:px-8 py-20 lg:py-32">
         <div className="text-center">
           <h2 className="text-2xl lg:text-3xl mb-4 lg:mb-8 font-semibold">Loan Calculators</h2>
@@ -261,6 +283,7 @@ export default function Home() {
 
             </div>
           </div>
+          <Popup />
           <Reviews />
           <DownloadApp />
           <Blogs />

@@ -29,7 +29,7 @@ export default function StickyFooter() {
 
     return (
         visible && (
-            <div className="fixed bottom-0 left-0 w-full max-w-[100vw] max-lg:px-6 bg-[#232222] text-white py-2 lg:py-5 shadow-lg z-50 transition-all duration-300">
+            <div className="fixed bottom-0 left-0 w-full max-w-[100vw] max-lg:px-6 bg-[#232222] text-white py-4 lg:py-5 shadow-lg z-50 transition-all duration-300">
                 <div className="w-full mx-auto text-center flex max-lg:flex-col justify-center items-center lg:gap-4 text-xl max-lg:text-sm">
                     <span>Need cash? Get up to ₹5 lakhs instantly</span>
                     <div className="flex gap-0">
@@ -44,7 +44,7 @@ export default function StickyFooter() {
                             id="contact"
                         />
                         <button
-                            className="bg-[#2e9898] text-white border border-[#2e9898] px-8 py-2 font-semibold rounded-r-lg"
+                            className="bg-[#2e9898] text-white border border-[#2e9898] px-4 lg:px-8 py-2 font-semibold rounded-r-lg"
                         >
                             Apply Now
                         </button>

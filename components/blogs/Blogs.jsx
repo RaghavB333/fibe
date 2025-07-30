@@ -1,14 +1,14 @@
 import React from 'react'
 const Blogs = () => {
     return (
-        <div className='items-center mb-20 flex flex-col mt-32'>
+        <div className='items-center w-full mb-20 flex flex-col mt-32'>
 
-            <h1 className='text-2xl lg:text-3xl font-bold lg:font-semibold text-center mb-10'>
+            <h1 className='text-3xl font-semibold text-center mb-10 mr-3'>
                 Fibe Blogs
             </h1>
-            <div className='flex max-lg:flex-col px-6 lg:px-10 gap-4 lg:gap-8 mb-10'>
-                <div className=' flex flex-col max-lg:w-full w-[90%]  lg:w-[45vw] border border-gray-300 hover:border-[#079f9f] rounded-lg h-full p-5'>
-                    <img width={450} height={450} className='object-contain lg:object-cover h-full w-full max-lg:h-64 lg:max-h-[320px] rounded-lg' src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2025%2F04%2FWhat-is-a-Pension-Plan-and-How-It-Works.jpg&w=384&q=100" alt="" />
+            <div className='flex max-lg:flex-col px-6 lg:px-10 gap-8 mb-10'>
+                <div className=' flex flex-col max-lg:w-full  w-[45vw] border border-gray-300 hover:border-[#079f9f] rounded-lg h-full p-5'>
+                    <img width={450} height={450} className='object-cover h-full w-full max-lg:h-44 lg:max-h-[320px] rounded-lg' src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2025%2F04%2FWhat-is-a-Pension-Plan-and-How-It-Works.jpg&w=384&q=100" alt="" />
                     <div className='flex gap-4 items-center mt-1 lg:ml-4'>
                         <div className='text-[#079f9f] font-[550]'>Banking</div>
                         <div className='w-px h-6 bg-gray-200'></div>
@@ -30,7 +30,7 @@ const Blogs = () => {
                 <div className='w-1/2 flex flex-col gap-[6%] max-lg:gap-8 max-lg:w-full'>
                     <div className='h-[47%] w-full border border-gray-300 hover:border-[#079f9f] rounded-lg p-5 flex max-lg:flex-col '>
                         <div>
-                            <img width={150} height={150} className='w-full lg:min-w-[15vw] max-lg: h-full object-contain lg:object-cover lg:w-[215px] max-lg:h-64' src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F05%2FWhat-is-personal-loan-sanction-letter.png&w=384&q=100" alt="" />
+                            <img width={150} height={150} className='w-full lg:min-w-[15vw] lg:h-full object-cover lg:w-[215px] max-lg:h-44' src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F05%2FWhat-is-personal-loan-sanction-letter.png&w=384&q=100" alt="" />
                         </div>
                         <div className='flex flex-col'>
                             <div className='flex gap-4 items-center mt-1 lg:ml-4'>
@@ -54,7 +54,7 @@ const Blogs = () => {
                     </div>
                     <div className='h-[47%] w-full border border-gray-300 hover:border-[#079f9f] rounded-lg p-5 flex max-lg:flex-col'>
                         <div>
-                            <img width={150} height={150} className='w-full lg:min-w-[15vw] h-full object-contain lg:object-cover lg:w-[215px] max-lg:h-64' src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F08%2FWhat-is-Video-KYC-How-to-prepare-for-a-V-KYC-for-Personal-Loan-application.jpg&w=384&q=100" alt="" />
+                            <img width={150} height={150} className='w-full lg:min-w-[15vw] h-full object-cover lg:w-[215px] max-lg:h-44' src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F08%2FWhat-is-Video-KYC-How-to-prepare-for-a-V-KYC-for-Personal-Loan-application.jpg&w=384&q=100" alt="" />
                         </div>
                         <div className='flex flex-col'>
                             <div className='flex gap-4 items-center mt-1 lg:ml-4'>
