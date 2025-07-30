@@ -24,6 +24,20 @@ export default function Home() {
 
   const [showPlayer, setShowPlayer] = useState(false);
 
+  const [animateIn, setAnimateIn] = useState(false);
+
+  const handleOpen = () => {
+    setShowPlayer(true);
+    // Trigger the animation in the next tick
+    setTimeout(() => setAnimateIn(true), 10);
+  };
+
+  const handleClose = () => {
+    setAnimateIn(false);
+    // Wait for animation to finish before removing the modal
+    setTimeout(() => setShowPlayer(false), 300);
+  };
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -109,21 +123,21 @@ export default function Home() {
             <div className="slick-track flex justify-center items-center">
               <div data-index="0" className={`${currentIndex === 0 ? "block" : "hidden"} lg:block w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
                 <div>
-                  <div onClick={() => {setVideoId("mpBhHNp2qVU"),setShowPlayer(true)}} className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
+                  <div onClick={() => {setVideoId("mpBhHNp2qVU"),handleOpen()}} className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
                     <img alt="Slide 0" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1" src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61963-1.png&w=3840&q=75"></img>
                   </div> 
                 </div>
               </div>
               <div data-index="1" className={`${currentIndex === 1 ? "block" : "hidden"} lg:block w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
                 <div>
-                  <div onClick={() => {setVideoId("CZLWz3uou4U"),setShowPlayer(true)}} className="flex justify-center cursor-pointer transition-transform slick-padding  lg:scale-125 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
+                  <div onClick={() => {setVideoId("CZLWz3uou4U"), handleOpen()}} className="flex justify-center cursor-pointer transition-transform slick-padding  lg:scale-125 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
                     <img alt="Slide 1" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1"  src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61956-1.png&w=3840&q=75"></img>
                   </div>
                 </div>
               </div>
               <div data-index="2" className={`${currentIndex === 2 ? "block" : "hidden"} lg:block w-[300px] lg:w-[512px]`} style={{outline: 'none'}}>
                 <div>
-                  <div onClick={() => {setVideoId("LiK6zeT6cTo"),setShowPlayer(true)}} className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
+                  <div onClick={() => {setVideoId("LiK6zeT6cTo"), handleOpen()}} className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{width: '100%', display: 'inline-block'}}>
                     <img alt="Slide 2" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1" src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61959.png&w=3840&q=75"></img>
                   </div>
                 </div>
@@ -145,12 +159,12 @@ export default function Home() {
         </div>
         </section>
         {showPlayer &&
-        <div className="fixed inset-0 flex items-center justify-center z-[9999]">
-    <div className="relative w-[90%] lg:max-w-3xl bg-white rounded-lg overflow-hidden">
+        <div onClick={() => handleClose()} className="fixed inset-0 bg-[#000000a2] flex items-center justify-center z-[9999]">
+    <div className={`relative w-[95%] lg:max-w-[820px] h-[208px] lg:h-[461px] overflow-hidden transform transition-transform duration-[1.5s] ease-in-out ${animateIn ? "translate-y-0 opacity-100" : "translate-y-10 opacity-10"}`}>
       {/* Close Button */}
       <button
-        onClick={() => setShowPlayer(false)}
-        className="absolute top-2 right-2 text-white p-2 rounded-full z-10"
+        onClick={() => handleClose()}
+        className={`absolute top-0 right-0 text-white p-2 rounded-full z-10`}
       >
         ✕
       </button>
@@ -158,7 +172,7 @@ export default function Home() {
       {/* YouTube Player */}
       <iframe
         width="100%"
-        height="400"
+        height="100%"
         src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
         title="YouTube video player"
         frameBorder="0"
@@ -210,17 +224,17 @@ export default function Home() {
               }
             `}</style>
             <SwiperSlide className="h-full flex items-center justify-center">
-              <div onClick={() => {setVideoId("mpBhHNp2qVU"),setShowPlayer(true)}} className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{ width: '100%', display: 'inline-block' }}>
+              <div onClick={() => {setVideoId("mpBhHNp2qVU"), handleOpen()}} className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{ width: '100%', display: 'inline-block' }}>
                 <img alt="Slide 0" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1" src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61963-1.png&w=3840&q=75"></img>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div onClick={() => {setVideoId("CZLWz3uou4U"),setShowPlayer(true)}} className="flex justify-center cursor-pointer transition-transform slick-padding  lg:scale-125 " tabIndex="-1" style={{ width: '100%', display: 'inline-block' }}>
+              <div onClick={() => {setVideoId("CZLWz3uou4U"), handleOpen()}} className="flex justify-center cursor-pointer transition-transform slick-padding  lg:scale-125 " tabIndex="-1" style={{ width: '100%', display: 'inline-block' }}>
                 <img alt="Slide 1" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1" src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61956-1.png&w=3840&q=75"></img>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div onClick={() => {setVideoId("LiK6zeT6cTo"),setShowPlayer(true)}}  className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{ width: '100%', display: 'inline-block' }}>
+              <div onClick={() => {setVideoId("LiK6zeT6cTo"), handleOpen()}}  className="flex justify-center cursor-pointer transition-transform slick-padding lg:scale-75 " tabIndex="-1" style={{ width: '100%', display: 'inline-block' }}>
                 <img alt="Slide 2" loading="lazy" width="1200" height="1200" decoding="async" data-nimg="1" src="https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F07%2FGroup-61959.png&w=3840&q=75"></img>
               </div>
             </SwiperSlide>
