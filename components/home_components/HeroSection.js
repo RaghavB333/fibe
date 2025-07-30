@@ -31,7 +31,7 @@ const HeroSection = () => {
                   <div>
                     <input type="text" inputMode="numeric" pattern="[0-9]*" placeholder="Enter your mobile number" value={formdata} onChange={(e)=>{const onlyNums = e.target.value.replace(/[^0-9]/g, ''); String(onlyNums).length <= 10 && setFormData(onlyNums);}} className="rounded-lg min-w-[300px] lg:min-w-[360px] lg:mr-2 p-3 lg:p-4 text-base lg:text-xl border border-gray-400 focus:border-[rgb(7,159,159)] focus:outline-none focus:ring-2 focus:ring-[rgb(7,159,159)] text-center lg:text-left" aria-label="Enter your mobile number" aria-describedby="btn-step-1"></input>
                   </div>
-                    <button type="submit" className="min-w-[300px] lg:mr-2 p-3 lg:p-4 rounded-lg bg-[rgb(3,135,135)] hover:bg-[rgb(57,128,128)] border border-[rgb(3,135,135)]]  px-3 py-3 lg:py-4 text-base font-semibold text-white  shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-dark lg:min-w-[250px] disabled:opacity-100 disabled:cursor-not-allowed" disabled={formdata.length != 10} id="btn-step-1">Get your loan now</button>
+                    <button type="submit" className="min-w-[300px] lg:mr-2 p-3 lg:p-4 rounded-lg bg-[rgb(3,135,135)] hover:bg-[rgb(57,128,128)] border border-[rgb(3,135,135)]]  px-3 py-3 lg:py-[17px] text-base font-semibold text-white  shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-dark lg:min-w-[250px] disabled:opacity-100 disabled:cursor-not-allowed" disabled={formdata.length != 10} id="btn-step-1">Get your loan now</button>
                 </div>
               </div>
             </form>
