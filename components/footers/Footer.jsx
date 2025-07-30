@@ -1,8 +1,55 @@
-"use client"
-import React from 'react'
+'use client';
+import { useEffect, useState } from 'react';
 import Link from 'next/link'
 
 const Footer = () => {
+
+    const [visible, setVisible] = useState(false);
+    const [phone, setPhone] = useState('');
+    const [sentToTop, setSentToTop] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollThreshold = window.innerHeight;
+
+            if (sentToTop) {
+                setVisible(window.scrollY < 1);
+            }
+            setVisible(window.scrollY > scrollThreshold);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+
+
+    const handleChange = (e) => {
+        const value = e.target.value;
+
+        // Remove non-digits
+        const digitsOnly = value.replace(/\D/g, '');
+
+        // Limit to 10 digits
+        if (digitsOnly.length <= 10) {
+            setPhone(digitsOnly);
+        }
+    };
+
+    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+
+    const handleClick = async () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Wait 3 seconds
+        await sleep(750);
+
+        setSentToTop(true);
+        setVisible(true);
+    };
+
+
     const handleClickPlay = () => {
         window.open("https://play.google.com/store/apps/details?id=com.earlysalary.android", "_blank", "noopener,noreferrer");
     };
@@ -13,7 +60,7 @@ const Footer = () => {
     return (
         <div className='mt-2'>
             <div className='flex justify-center items-center'>
-                <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className='bg-black text-white mx-auto flex justify-center items-center rounded-[100%] w-[80px] h-[80px] text-xl hover:cursor-pointer'>
+                <button onClick={handleClick} className='bg-black text-white mx-auto flex justify-center items-center rounded-[100%] w-[80px] h-[80px] text-xl hover:cursor-pointer'>
                     <img src="https://www.fibe.in/icons/arrowup.svg" alt="up-arrow" width={15} height={16} />
                 </button>
             </div>
@@ -41,7 +88,7 @@ const Footer = () => {
                             <div className="lg:hidden flex justify-stretch items-center my-4">
                                 <div className="h-px bg-gray-600 w-[90%]"></div>
                             </div>
-                            
+
                             <div className='flex flex-col text-[#dedede] gap-2'>
                                 <h1 className='mb-4 text-white font-semibold'>Fibe EMIS</h1>
                                 <Link href={"/"} className='hover:text-white'>Buy Now Pay Later</Link>
@@ -316,7 +363,7 @@ const Footer = () => {
                             <div className="lg:hidden flex justify-stretch items-center my-4">
                                 <div className="h-px bg-gray-600 w-[90%]"></div>
                             </div>
-                            
+
                             <div className='flex flex-col text-[#dedede] gap-2'>
                                 <h1 className='mb-4 mt-5 text-white font-semibold' >Financial Dictionary</h1 >
 
@@ -377,6 +424,29 @@ const Footer = () => {
 
 
             </div>
+            {visible &&
+                <div className="fixed bottom-0 left-0 w-full max-w-[100vw] max-lg:px-6 bg-[#232222] text-white py-4 lg:py-5 shadow-lg z-50 transition-all duration-300">
+                    <div className="w-full mx-auto text-center flex max-lg:flex-col justify-center items-center lg:gap-4 text-xl max-lg:text-sm">
+                        <span>Need cash? Get up to ₹5 lakhs instantly</span>
+                        <div className="flex gap-0">
+                            <input
+                                className="bg-white text-black p-3 max-lg:w-52 w-96 border border-gray-300 rounded-l-lg focus:border-[#2e9898] outline-none"
+                                type="text"
+                                inputMode="numeric"
+                                value={phone}
+                                onChange={handleChange}
+                                placeholder="Enter mobile number"
+                                name="contact"
+                                id="contact"
+                            />
+                            <button
+                                className="bg-[#2e9898] text-white border border-[#2e9898] px-4 lg:px-8 py-2 font-semibold rounded-r-lg"
+                            >
+                                Apply Now
+                            </button>
+                        </div>
+                    </div>
+                </div>}
         </div>
     )
 }
