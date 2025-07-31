@@ -28,7 +28,7 @@ const Blogs = ({data, heading}) => {
               <div>{mainBlog.date}</div>
             </div>
             <div className='lg:ml-4 my-4 text-lg font-semibold'>{mainBlog.title}</div>
-            <div className='text-gray-400 font-light lg:ml-4  line-clamp-3 lg:line-clamp-2'>{mainBlog.description}</div>
+            <div className='text-gray-500 font-light lg:ml-4  line-clamp-3 lg:line-clamp-2'>{mainBlog.description}</div>
             <div className='flex justify-between lg:ml-4 mt-2'>
               <span className='text-[#079f9f] font-semibold'>Read More</span>
               <span className='text-gray-400'>{mainBlog.readTime}</span>

@@ -40,14 +40,14 @@ const NavbarForMobile = () => {
     return (
         <>
             {/* Navbar */}
-            <nav className='fixed z-[9997] w-full top-0 flex justify-between items-center px-8 bg-gradient-to-t from-[#FFF1F5] to-[#FFF8ED] shadow-lg'>
-                <div className='pb-5 pt-4 pl-5 '>
+            <nav className='fixed z-[8999] w-full top-0 flex justify-between items-center px-8 bg-gradient-to-t from-[#FFF1F5] to-[#FFF8ED] shadow-lg'>
+                <div className='pb-5 pt-4 pl-4 '>
                     <Link href="/">
                         <Image priority width={50} height={50} src="https://www.fibe.in/fibe-india.svg" alt="fibe-logo" />
                     </Link>
                 </div>
                 <div className='flex gap-3 items-center'>
-                    <span className='font-semibold mt-1'>Get App</span>
+                    <span className='font-medium mt-1'>Get App</span>
                     <Image priority src="https://www.fibe.in/icons/apple.svg" width={16} height={16} alt='apple logo' />
                     <Image priority src="https://www.fibe.in/icons/google-play.svg" width={16} height={16} alt='playstore logo' className='mt-1' />
                     <Image
@@ -77,7 +77,7 @@ const NavbarForMobile = () => {
                     >
                         <div className='p-5 flex flex-col gap-8 font-semibold'>
                             <div className="flex justify-between">
-                                <Link href="https://www.fibe.in/">
+                                <Link href="/" onClick={()=>setShowHamburger(false)}>
                                     <Image width={50} height={50} src="https://www.fibe.in/fibe-india.svg" alt="fibe-logo" />
                                 </Link>
                                 <button

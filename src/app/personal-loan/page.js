@@ -11,10 +11,14 @@ import FAQs from "@/components/FAQs/FAQs";
 import TypesOfLoan from '@/components/personal-loan/TypesOfLoan'
 import SubNavbar from "@/components/navbars/SubNavbar";
 import Blogs from "@/components/blogs/Blogs";
+import Reviews from "@/components/reviews/Reviews";
+import DownloadApp from "@/components/downloadApp/DownloadApp";
+
+
 const page = () => {
   const [formdata, setFormData] = useState("");
 
-    const LoanSectionTitle = "How to apply for Personal Loan?";
+  const LoanSectionTitle = "How to apply for Personal Loan?";
   const LoanSectionDescription = "You can get a quick personal loan online with Fibe in super simple and quick steps.";
 
   const steps = [
@@ -83,56 +87,56 @@ const page = () => {
   ];
 
   const whiteCardTitle = "Benefits of Personal Loan from Fibe";
-  const whiteCardDescription = "Here’s a look at the benefits associated with when you avail loan from Fibe:";
+  const whiteCardDescription = `Here's a look at the benefits associated with when you avail loan from Fibe:`;
 
   const whiteCardData = [
-      {
-          title: "No restrictions on usage",
-          description: "Loans can be used for any purpose like medical treatment, home renovation, etc.",
-          img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61333-3.png&w=128&q=75"
-      },
-      {
-          title: "Collateral-free loans",
-          description: "While applying for a quick instant loan, you don’t need to provide any type of security",
-          img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61351.png&w=128&q=75"
-        },
-         {
-            title: "100% digital journey",
-            description: "No long forms or paperwork, just upload soft copies of the documents and get instant approval",
-            img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61334.png&w=128&q=75"
-        },
-        {
-            title: "Affordable interest rates",
-            description: "Fibe offers attractive interest  rates on personal loans, even to new credit customers",
-            img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61364.png&w=128&q=75"
-        },
-        {
-            title: "Borrow multiple times",
-            description: "Repay your previous loan, anytime with 0 pre-closure charges and get the next one instantly",
-            img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61333-1.png&w=128&q=75"
-        },
-        {
-            title: "Flexible repayment",
-            description: "Get cash up to ₹5 lakhs & repay at a tenure ranging from 6 to 36 months",
-            img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61350.png&w=128&q=75"
-        },
-        {
-          title: "Cash in bank",
-          description: "Get funds directly in your bank account in minutes*",
-          img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61333.png&w=128&q=75"
-        },
-       
-        {
-            title: "Secure app",
-            description: "With ISO 27001 certification and PCI DSS app-based journey, getting instant cash is easy and secure",
-            img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61334.png&w=128&q=75"
-        },
-    ];
-    
-    const informationcardTitle = "Personal Loan Eligibility Criteria";
-    const informationCardDescription = "Qualifying for an online loan from Fibe is pretty simple, thanks to our easy-to-meet eligibility criteria. Refer to the list to check your eligibility. If you match the eligibility criteria, you can then download Fibe’s App or log on to our website and apply for the loan in minutes.";
-    
-    const informationCardData = [
+    {
+      title: "No restrictions on usage",
+      description: "Loans can be used for any purpose like medical treatment, home renovation, etc.",
+      img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61333-3.png&w=128&q=75"
+    },
+    {
+      title: "Collateral-free loans",
+      description: `While applying for a quick instant loan, you don't need to provide any type of security`,
+      img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61351.png&w=128&q=75"
+    },
+    {
+      title: "100% digital journey",
+      description: "No long forms or paperwork, just upload soft copies of the documents and get instant approval",
+      img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61334.png&w=128&q=75"
+    },
+    {
+      title: "Affordable interest rates",
+      description: "Fibe offers attractive interest  rates on personal loans, even to new credit customers",
+      img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61364.png&w=128&q=75"
+    },
+    {
+      title: "Borrow multiple times",
+      description: "Repay your previous loan, anytime with 0 pre-closure charges and get the next one instantly",
+      img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61333-1.png&w=128&q=75"
+    },
+    {
+      title: "Flexible repayment",
+      description: "Get cash up to ₹5 lakhs & repay at a tenure ranging from 6 to 36 months",
+      img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61350.png&w=128&q=75"
+    },
+    {
+      title: "Cash in bank",
+      description: "Get funds directly in your bank account in minutes*",
+      img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61333.png&w=128&q=75"
+    },
+
+    {
+      title: "Secure app",
+      description: "With ISO 27001 certification and PCI DSS app-based journey, getting instant cash is easy and secure",
+      img: "https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F08%2FGroup-61334.png&w=128&q=75"
+    },
+  ];
+
+  const informationcardTitle = "Personal Loan Eligibility Criteria";
+  const informationCardDescription = `Qualifying for an online loan from Fibe is pretty simple, thanks to our easy-to-meet eligibility criteria. Refer to the list to check your eligibility. If you match the eligibility criteria, you can then download Fibe's App or log on to our website and apply for the loan in minutes.`;
+
+  const informationCardData = [
     {
       title: "Age",
       description: "19 Years to 55 Years",
@@ -176,7 +180,7 @@ const page = () => {
     },
   ];
 
-    const FAQS = [
+  const FAQS = [
     {
       question: "How can I get a personal loan immediately?",
       answer: "You can get a personal loan instantly using the Fibe app or the official website. All you have to do is fill in a few personal details of yours and check your eligibility. After this, submit the necessary documents and enter the loan amount you wish to borrow to avail of the instant personal loan online."
@@ -220,100 +224,100 @@ const page = () => {
   ];
 
 
-const navbarItems = [
+  const navbarItems = [
     {
-        name: "EMI calculator",
-        href: "#calc"
+      name: "EMI calculator",
+      href: "#calc"
     },
     {
-        name: "How to apply",
-        href: "#howto"
+      name: "How to apply",
+      href: "#howto"
     },
     {
-        name: "Types of loan",
-        href: "#tol"
+      name: "Types of loan",
+      href: "#tol"
     },
     {
-        name: "Fees & charges",
-        href: "#fc"
+      name: "Fees & charges",
+      href: "#fc"
     },
     {
-        name: "Personal loan features",
-        href: "#plf"
+      name: "Personal loan features",
+      href: "#plf"
     },
     {
-        name: "Check eligibilty",
-        href: "#ce"
+      name: "Check eligibilty",
+      href: "#ce"
     },
     {
-        name: "Documents required",
-        href: "#dr"
+      name: "Documents required",
+      href: "#dr"
     },
     {
-        name: "Personal loan amount",
-        href: "#pla"
+      name: "Personal loan amount",
+      href: "#pla"
     },
     {
-        name: "FAQs",
-        href: "#faq"
+      name: "FAQs",
+      href: "#faq"
     },
     {
-        name: "Blogs",
-        href: "#blogs"
+      name: "Blogs",
+      href: "#blogs"
     },
     {
-        name: "Download app",
-        href: "#download"
+      name: "Download app",
+      href: "#download"
     },
     {
-        name: "Testimonials",
-        href: "#testimonials"
+      name: "Testimonials",
+      href: "#testimonials"
     },
-]
+  ]
 
 
-const blogsData = [
+  const blogsData = [
     {
-        id: 1,
-        type: 'Instant Cash Loan',
-        date: '13 May 2025',
-        title: 'How to Make Advance EMI Payment Online: A Detailed Guide',
-        description:
-            "EMIs make loan repayments easy by spreading them across monthly instalments. But what if you have some extra funds and want to pay more — or even finish your loan sooner? That&apos;s when the question arises: &apos;Can I pay EMIs in advance?&apos; Yes, many lenders allow advance EMI payments or prepayments — often through simple online … ",
-        image:
-            'https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F05%2FHow-to-Make-Advance-EMI-Payment-Online.jpg&w=384&q=100',
-        readTime: '3 mins read',
-        layout: 'main',
+      id: 1,
+      type: 'Personal Loan',
+      date: '17 Dec 2024',
+      title: 'RBI Kehta Hai: Protect Yourself from Money Mule Scams!`',
+      description:
+        `Ever heard of a 'Money Mule' scam? It's when scammers trick people into using their bank accounts to move money for illegal activities — often without them realising it. The Reserve Bank of India (RBI), through its campaign RBI Kehta Hai, wants to make sure you stay informed and protected from such financial traps. What's …  `,
+      image:
+        'https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F12%2FProtect-from-Money-Mule-Scams.jpg&w=384&q=100',
+      readTime: '3 mins read',
+      layout: 'main',
     },
     {
-        id: 2,
-        type: 'Instant Cash Loan',
-        date: '4 Mar 2025',
-        title: 'iPhone on EMI: How to buy, chose the model and finance your purchase',
-        description:
-            'Today you can finance an iPhone via affordable EMIs both online and offline with ease. Many lenders in India offer a plethora of short-term loans or credit card options that you can use to buy your iPhone.  With so many options, choosing one can be difficult, especially when you want to buy an Apple iPhone … ',
-        image:
-            'https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F11%2FBuy-iPhone-on-EMI.jpg&w=384&q=100',
-        readTime: '3 mins read',
-        layout: 'side',
+      id: 2,
+      type: 'Personal Loan',
+      date: '14 Nov 2024',
+      title: 'How to Own One of the Best Smart TVs in India',
+      description:
+        'When it comes to buying a smart TV, price may be one of the first things on your mind. However, you should also look at audio-visual specifications, size, resolution and more before making a final decision. Upgrading to a smart TV is now a must as all the devices are becoming smart in this digital … ',
+      image:
+        'https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F08%2FSmart-TVs-at-Best-Prices-in-India-and-know-how-to-finance-It.jpg&w=384&q=100',
+      readTime: '3 mins read',
+      layout: 'side',
     },
     {
-        id: 3,
-        type: 'Instant Cash Loan',
-        date: '8 Nov 2025',
-        title: 'Learn How to Buy a TV Under ₹20,000 on Affordable, Pocket-friendly EMIs',
-        description:
-            'When looking to buy a TV under ₹20,000, it is vital that you research your options. Most of these TVs have smart features offering internet connectivity, OTT subscription, voice assistance and more. Some models also have outstanding visual and audio quality, and you have many options to choose from.  Moreover, you can pay for a … ',
-        image:
-            'https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F11%2FBuy-smart-TV-under-Rs.20000.jpg&w=384&q=100',
-        readTime: '3 mins read',
-        layout: 'side',
+      id: 3,
+      type: 'Personal Loan',
+      date: '26 Sept 2024',
+      title: 'Know How To Bring Interior Design Ideas To Life With Personal Loans',
+      description:
+        'Changing the interior design of your house or maintaining your property can be a big expense. With everyday expenses, saving money for home improvement can take a long time. In this case, a personal loan for interior decoration can help you upgrade your home décor and make it as luxurious as you like without delay.  … ',
+      image:
+        'https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F09%2F2024-Luxury-Interior-Design-on-a-Budget-How-Personal-Loans-Make-It-Possible.jpg&w=384&q=100',
+      readTime: '3 mins read',
+      layout: 'side',
     },
-];
+  ];
 
   return (
     <div>
-        <SubNavbar items={navbarItems}/>
+      <SubNavbar items={navbarItems} />
       <section
         className="w-full px-6 lg:px-8 flex bg-gradient-to-t from-[#FFF3F78F] to-[#EBFFFF91]"
         id="herobanner"
@@ -412,12 +416,12 @@ const blogsData = [
         </div>
       </section>
 
-    {/* Wave section */}
+      {/* Wave section */}
       <Wave />
 
       {/* Calculator */}
 
-    <div className="bg-[rgb(247,255,255)] px-6 lg:px-8 py-20 lg:py-32">
+      <div id="calc" className="bg-[rgb(247,255,255)] px-6 lg:px-8 py-20 lg:py-32">
         <div className="text-center">
           <h2 className="text-2xl lg:text-3xl mb-4 lg:mb-8 font-semibold">
             Calculate your Personal Loan EMI
@@ -429,72 +433,85 @@ const blogsData = [
         <LoanCalculator />
       </div>
 
-        {/* Apply Loan */}
-    
-    <GetLoan
-        steps={steps}
-        title={LoanSectionTitle}
-        description={LoanSectionDescription}
-        bgcolor={"white"}
-      />
+      {/* Apply Loan */}
+      <section id="howto">
+        <GetLoan
+          steps={steps}
+          title={LoanSectionTitle}
+          description={LoanSectionDescription}
+          bgcolor={"white"}
+        />
+      </section>
 
-
-      <TypesOfLoan />
+      <section id="tol">
+        <TypesOfLoan />
+      </section>
 
 
       {/* Table Section */}
 
-      <section className="px-6 lg:px-8 py-8 lg:py-12 bg-white">
+      <section id="fc" className="px-6 lg:px-8 py-8 lg:py-12 bg-white">
         <div className="text-center">
           <h2 className="text-2xl lg:text-3xl mb-4 lg:mb-8 font-semibold">
             Processing Fees and Charges for Personal Loan
           </h2>
           <p className="max-w-5xl mx-auto text-base lg:text-xl mb-2">
-            Our online personal loan interest rates apply only for the number of days you use the loan amount. We don’t levy any pre-closure fees and there are no annual charges or renewal fees. Additionally, we have no hidden fees. All these features make us an affordable and reliable provider amongst others. 
+            Our online personal loan interest rates apply only for the number of days you use the loan amount. We don&apos;t levy any pre-closure fees and there are no annual charges or renewal fees. Additionally, we have no hidden fees. All these features make us an affordable and reliable provider amongst others.
           </p>
           <p className="font-semibold max-w-5xl mx-auto text-base lg:text-xl mb-8">
-            Here’s our detailed fee structure.
+            Here&apos;s our detailed fee structure.
           </p>
         </div>
         <Table tableData={tableData} />
       </section>
 
       {/* Benefits of Personal loan White Card Section */}
+      <section id="plf">
+        <WhiteCardSection title={whiteCardTitle} description={whiteCardDescription} cardData={whiteCardData} />
+      </section>
+      {/* Eligibility Criteria */}
 
-    <WhiteCardSection title={whiteCardTitle} description={whiteCardDescription} cardData={whiteCardData} />
+      <section id="ce">
 
-    {/* Eligibility Criteria */}
-
-    <Informationcardsection
-        title={informationcardTitle}
-        description={informationCardDescription}
-        cardData={informationCardData}
-        showButton={true}
-      />
-
+        <Informationcardsection
+          title={informationcardTitle}
+          description={informationCardDescription}
+          cardData={informationCardData}
+          showButton={true}
+        />
+      </section>
       {/* Document Required  */}
 
-      <Informationcardsection
-        title={informationcardTitle2}
-        description={informationCardDescription2}
-        cardData={informationCardData2}
-        p={
-          "Below is the list of documents that are necessary for a personal loan application:"
-        }
-        showButton={false}
-      />
 
+      <section id="dr">
+        <Informationcardsection
+          title={informationcardTitle2}
+          description={informationCardDescription2}
+          cardData={informationCardData2}
+          p={
+            "Below is the list of documents that are necessary for a personal loan application:"
+          }
+          showButton={false}
+        />
+      </section>
       {/* Loan Amount */}
 
-      <LoanAmountSection title={"Choose Personal Loan by amount"}/>
+      <section id="pla">
+
+        <LoanAmountSection title={"Choose Personal Loan by amount"} />
+      </section>
 
       {/* FAQs */}
-
-      <FAQs title={"FAQs on Personal Loan"} FAQS={FAQS}/>
+      <section id="faq">
+        <FAQs title={"FAQs on Personal Loan"} FAQS={FAQS} />
+      </section>
 
       {/* blogs */}
-
-      <Blogs data={blogsData} heading={"Personal Loan Blogs"}/>
+      <section id="blogs">
+        <Blogs data={blogsData} heading={"Personal Loan Blogs"} />
+      </section>
+      <section id="testimonials"><Reviews /></section>
+      <section id="download"><DownloadApp /></section>
     </div>
   );
 };
