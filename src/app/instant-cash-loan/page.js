@@ -20,43 +20,43 @@ import HowToManage from "@/components/instant-cash-loan/HowToManage";
 const navbarItems = [
   {
     name: "EMI calculator",
-    href: "/"
+    href: "#calc"
   },
   {
     name: "How to apply",
-    href: "/"
+    href: "#howto"
   },
   {
     name: "Check eligibilty",
-    href: "/"
+    href: "#ce"
   },
   {
     name: "Documents required",
-    href: "/"
+    href: "#dr"
   },
   {
     name: "Fees & charges",
-    href: "/"
+    href: "#fc"
   },
   {
     name: "Instant cash loan features",
-    href: "/"
+    href: "#iclf"
   },
   {
     name: "FAQs",
-    href: "/"
+    href: "#faq"
   },
   {
     name: "Blogs",
-    href: "/"
+    href: "#blogs"
   },
   {
     name: "Download app",
-    href: "/"
+    href: "#download"
   },
   {
     name: "Testimonials",
-    href: "/"
+    href: "#testimonials"
   },
 ]
 
@@ -496,14 +496,17 @@ const page = () => {
         </div>
       </section>
       <Wave />
-      <GetLoan
-        steps={steps}
-        title={LoanSectionTitle}
-        description={LoanSectionDescription}
-        bgcolor={"white"}
-      />
+      <section id="howto">
+        <GetLoan
+          steps={steps}
+          title={LoanSectionTitle}
+          description={LoanSectionDescription}
+          bgcolor={"white"}
+          id={"howto"}
+        />
+      </section>
 
-      <div className="bg-[rgb(247,255,255)] px-6 lg:px-8 py-20 lg:py-32">
+      <div id="calc" className="bg-[rgb(247,255,255)] px-6 lg:px-8 py-20 lg:py-32">
         <div className="text-center">
           <h2 className="text-2xl lg:text-3xl mb-4 lg:mb-8 font-semibold">
             Instant Cash Loan EMI Calculator
@@ -518,14 +521,16 @@ const page = () => {
         </div>
         <LoanCalculator />
       </div>
-      <Informationcardsection
-        title={informationcardTitle}
-        description={informationCardDescription}
-        cardData={informationCardData}
-        showButton={true}
-      />
+      <section id="ce">
+        <Informationcardsection
+          title={informationcardTitle}
+          description={informationCardDescription}
+          cardData={informationCardData}
+          showButton={true}
+        />
+      </section>
 
-      <section className="px-6 lg:px-8 py-8 lg:py-12 bg-white">
+      <section id="fc" className="px-6 lg:px-8 py-8 lg:py-12 bg-white">
         <div className="text-center">
           <h2 className="text-2xl lg:text-3xl mb-4 lg:mb-8 font-semibold">
             Instant Loan Fees and Charges
@@ -538,21 +543,25 @@ const page = () => {
             others.
           </p>
           <p className="font-semibold max-w-5xl mx-auto text-base lg:text-xl mb-8">
-            Here’s our detailed fee structure.
+            Here&apos;s our detailed fee structure.
           </p>
         </div>
         <Table tableData={tableData} />
       </section>
-      <Informationcardsection
-        title={informationcardTitle2}
-        description={informationCardDescription2}
-        cardData={informationCardData2}
-        p={
-          "Check out the list of documents that are necessary for an Instant loan application below:"
-        }
-        showButton={false}
-      />
-      <FactorsAffecting />
+      <section id="dr">
+        <Informationcardsection
+          title={informationcardTitle2}
+          description={informationCardDescription2}
+          cardData={informationCardData2}
+          p={
+            "Check out the list of documents that are necessary for an Instant loan application below:"
+          }
+          showButton={false}
+        />
+      </section>
+      <section id="iclf">
+        <FactorsAffecting />
+      </section>
       <section
         className="px-6 lg:px-8 pt-20 pb-8 lg:pt-[130px] lg:pb-[82px]"
         id="documents"
@@ -600,13 +609,15 @@ const page = () => {
       <WhiteCardSection title={whiteCardTitle} description={whiteCardDescription} cardData={whiteCardData} />
       <HowToManage />
       <LoanAmountSection />
-      <FAQs FAQS={FAQS} />
+      <section id="faq">
+        <FAQs FAQS={FAQS} />
+      </section>
 
 
-      
-      <Blogs data={blogsData} heading={"Instant Cash Loan Blogs"} />
-      <Reviews />
-      <DownloadApp />
+
+      <section id="blogs"><Blogs data={blogsData} heading={"Instant Cash Loan Blogs"} /></section>
+      <section id="testimonials"><Reviews /></section>
+      <section id="download"><DownloadApp /></section>
 
     </div>
   );
