@@ -45,7 +45,7 @@ const Navbar = () => {
         <>
             {
                 navType === "desktop" &&
-                <nav className='max-lg:hidden fixed flex z-[8999] w-full top-0 bg-gradient-to-t from-[#FFF1F5] to-[#FFF8ED] px-2 py-3 justify-between shadow-lg'>
+                <nav className='max-lg:hidden fixed flex z-[9001] w-full top-0 bg-gradient-to-t from-[#FFF1F5] to-[#FFF8ED] px-2 py-3 justify-between shadow-lg'>
 
                     <Link href={"/"}><img src="https://www.fibe.in/fibe-india.svg" alt="fibe-logo" /></Link>
                     <ul className='flex items-center gap-6 font-semibold text-lg'>
@@ -69,7 +69,7 @@ const Navbar = () => {
                                 >
                                     <path d="M1 1L6 5L11 1" strokeWidth="1.5" />
                                 </svg>
-                                <ul className="absolute right-[39vw] mt-64 bg-white rounded-xl shadow-xl z-50 w-96 p-4 space-y-4 text-sm transform scale-y-0 opacity-0 origin-top lg:transition duration-300 lg:duration-150 ease-out lg:ease-in-out lg:origin-top  lg:shadow-lg group-hover:scale-y-100 group-hover:opacity-100">
+                                <ul className="absolute right-[39vw] mt-64 bg-white rounded-xl shadow-xl z-[9999] w-96 p-4 space-y-4 text-sm transform scale-y-0 opacity-0 origin-top lg:transition duration-300 lg:duration-150 ease-out lg:ease-in-out lg:origin-top  lg:shadow-lg group-hover:scale-y-100 group-hover:opacity-100">
 
                                     {/* Item 1 - Instant Cash Loan */}
                                     <a href='/instant-cash-loan' className="group/item flex items-start gap-3 p-2 rounded-lg transition-all cursor-pointer hover:bg-[rgb(254,249,235)]">
@@ -130,7 +130,7 @@ const Navbar = () => {
                                 >
                                     <path d="M1 1L6 5L11 1" strokeWidth="1.5" />
                                 </svg>
-                                <ul className="absolute left-[-7vw] mt-[60vh] bg-white rounded-xl shadow-xl z-50 w-[40vw] pl-4 py-3 space-y-4 text-sm 
+                                <ul className="absolute left-[-7vw] mt-[60vh] bg-white rounded-xl shadow-xl z-[9999] w-[40vw] pl-4 py-3 space-y-4 text-sm 
                transform scale-y-0 opacity-0 origin-top lg:transition duration-300 lg:duration-150 ease-out 
                lg:ease-in-out lg:origin-top lg:shadow-lg 
                group-hover:scale-y-100 group-hover:opacity-100 
@@ -285,7 +285,7 @@ const Navbar = () => {
 
 
 
-                                <ul className="absolute left-[-7vw] mt-[30vh] bg-white rounded-xl shadow-xl z-50 w-[40vw] pl-4 py-3 space-y-4 text-sm transform scale-y-0 opacity-0 origin-top lg:transition duration-300 lg:duration-150 ease-out lg:ease-in-out lg:origin-top lg:shadow-lg group-hover:scale-y-100 group-hover:opacity-100 grid grid-cols-[1fr_auto_1fr] items-stretch">
+                                <ul className="absolute left-[-7vw] mt-[30vh] bg-white rounded-xl shadow-xl z-[9999] w-[40vw] pl-4 py-3 space-y-4 text-sm transform scale-y-0 opacity-0 origin-top lg:transition duration-300 lg:duration-150 ease-out lg:ease-in-out lg:origin-top lg:shadow-lg group-hover:scale-y-100 group-hover:opacity-100 grid grid-cols-[1fr_auto_1fr] items-stretch">
                                     <div className='flex flex-col gap-4'>
 
                                         <Link href={"/"} className='flex  hover:bg-[rgb(254,249,235)] p-1 rounded-lg group/item'>
@@ -366,7 +366,7 @@ const Navbar = () => {
 
 
 
-                                <ul className="absolute left-[-7vw] mt-[30vh] bg-white rounded-xl shadow-xl z-50 w-[23vw] pl-4 py-3 space-y-4 text-sm transform scale-y-0 opacity-0 origin-top lg:transition duration-300 lg:duration-150 ease-out lg:ease-in-out lg:origin-top lg:shadow-lg group-hover:scale-y-100 group-hover:opacity-100 p-1">
+                                <ul className="absolute left-[-7vw] mt-[30vh] bg-white rounded-xl shadow-xl z-[9999] w-[23vw] pl-4 py-3 space-y-4 text-sm transform scale-y-0 opacity-0 origin-top lg:transition duration-300 lg:duration-150 ease-out lg:ease-in-out lg:origin-top lg:shadow-lg group-hover:scale-y-100 group-hover:opacity-100 p-1">
 
 
                                     <Link href={"/"} className='flex  hover:bg-[rgb(254,249,235)] p-1 rounded-lg group/item'>
@@ -420,7 +420,7 @@ const Navbar = () => {
 
 
 
-                                <ul className="absolute left-[-17.78vw] mt-[32vh] bg-white rounded-xl shadow-xl z-50 w-[42vw] pl-4 py-3 space-y-4 text-sm transform scale-y-0 opacity-0 origin-top lg:transition duration-300 lg:duration-150 ease-out lg:ease-in-out lg:origin-top lg:shadow-lg group-hover:scale-y-100 group-hover:opacity-100 grid grid-cols-[1fr_auto_1fr] items-stretch">
+                                <ul className="absolute left-[-17.78vw] mt-[32vh] bg-white rounded-xl shadow-xl z-[9999] w-[42vw] pl-4 py-3 space-y-4 text-sm transform scale-y-0 opacity-0 origin-top lg:transition duration-300 lg:duration-150 ease-out lg:ease-in-out lg:origin-top lg:shadow-lg group-hover:scale-y-100 group-hover:opacity-100 grid grid-cols-[1fr_auto_1fr] items-stretch">
                                     <div className='flex flex-col gap-4'>
 
                                         <Link href={"/"} className='flex  hover:bg-[rgb(254,249,235)] p-1 rounded-lg group/item'>
@@ -500,7 +500,7 @@ const Navbar = () => {
 
 
 
-                                <ul className="absolute left-[-2vw] mt-[44vh] bg-white rounded-xl shadow-xl z-50 w-[20vw] pl-4 py-3 space-y-4 text-sm transform scale-y-0 opacity-0 origin-top lg:transition duration-300 lg:duration-150 ease-out lg:ease-in-out lg:origin-top lg:shadow-lg group-hover:scale-y-100 group-hover:opacity-100">
+                                <ul className="absolute left-[-2vw] mt-[44vh] bg-white rounded-xl shadow-xl z-[9999] w-[20vw] pl-4 py-3 space-y-4 text-sm transform scale-y-0 opacity-0 origin-top lg:transition duration-300 lg:duration-150 ease-out lg:ease-in-out lg:origin-top lg:shadow-lg group-hover:scale-y-100 group-hover:opacity-100">
                                     <div className='flex flex-col'>
                                         <h2 className='text-lg'>
                                             Scan QR to get the Fibe app
