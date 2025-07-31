@@ -1,13 +1,13 @@
 import React from "react";
 
-const LoanAmountSection = () => {
+const LoanAmountSection = ({title}) => {
   return (
     <div
-      className=" mt-24 mb-16 px-6 lg:px-8 container "
+      className="mt-24 mb-16 px-6 lg:px-8 container "
     >
       <div className="text-center">
         <h2 className="text-2xl lg:text-3xl mb-4 lg:mb-8 font-semibold">
-          Loan Amount Available
+          {title}
         </h2>
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-2">
           <a

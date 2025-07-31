@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation';
+
 
 const NavbarForTouchLargeScreens = () => {
+    const pathName = usePathname();
 
 
     const [activeDropdown, setActiveDropdown] = useState(null)
@@ -21,7 +24,8 @@ const NavbarForTouchLargeScreens = () => {
             <ul className='flex items-center gap-6 font-semibold text-lg'>
                 <li className="group">
                     <div className="flex items-center gap-1 cursor-pointer">
-                        <button onClick={() => setActiveDropdown(activeDropdown === 'loans' ? null : 'loans')} className="hover:cursor-pointer">Loans</button>
+                        <button onClick={() => setActiveDropdown(activeDropdown === 'loans' ? null : 'loans')} className={`hover:cursor-pointer ${pathName === "/instant-cash-loan" ? "text-[#079f9f]" : "text-black"
+                            }`}>Loans</button>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="12"
@@ -47,7 +51,7 @@ const NavbarForTouchLargeScreens = () => {
 
                                 {/* Text */}
                                 <div className="flex-1">
-                                    <div className="font-semibold text-black flex justify-between items-center">
+                                    <a href='/instant-cash-loan' className="font-semibold text-black flex justify-between items-center">
                                         Instant Cash Loan
                                         <span className="text-black mr-[10vw] inline-block transform transition-transform duration-300 ease-in-out group-hover/item:translate-x-2">
                                             →
@@ -55,7 +59,7 @@ const NavbarForTouchLargeScreens = () => {
 
 
 
-                                    </div>
+                                    </a>
                                     <p className="text-gray-500 mt-1">Get quick cash loans of up to ₹5 lacs in 2 minutes</p>
                                 </div>
                             </li>
@@ -473,7 +477,7 @@ const NavbarForTouchLargeScreens = () => {
 
 
 
-                         <ul
+                        <ul
                             className={`absolute mt-[25vh] left-0 bg-white rounded-xl shadow-xl z-50 w-[26.5vw] p-4 space-y-4 text-sm transform origin-top transition duration-300 ease-in-out
     ${activeDropdown === 'DF' ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'}
   `}>

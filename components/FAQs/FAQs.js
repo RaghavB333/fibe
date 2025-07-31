@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
-const FAQs = ({ FAQS }) => {
+const FAQs = ({ title , FAQS }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [limit, setLimit] = useState(5);
   return (
     <section className="px-6 lg:px-8 py-12 lg:py-24 bg-[#fef9eb] mt-12 lg:mt-24">
       <div className="text-center">
         <h2 className="text-2xl lg:text-3xl mb-4 lg:mb-8 font-semibold">
-          Instant Cash Loan FAQs
+          {title}
         </h2>
       </div>
       <div className="flex lg:flex-nowrap container mx-auto">
