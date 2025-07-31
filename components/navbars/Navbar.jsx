@@ -45,7 +45,7 @@ const Navbar = () => {
         <>
             {
                 navType === "desktop" &&
-                <nav className='max-lg:hidden fixed flex z-[9999] w-full top-0 bg-gradient-to-t from-[#FFF1F5] to-[#FFF8ED] px-2 py-3 justify-between shadow-lg'>
+                <nav className='max-lg:hidden fixed flex z-[8999] w-full top-0 bg-gradient-to-t from-[#FFF1F5] to-[#FFF8ED] px-2 py-3 justify-between shadow-lg'>
 
                     <Link href={"/"}><img src="https://www.fibe.in/fibe-india.svg" alt="fibe-logo" /></Link>
                     <ul className='flex items-center gap-6 font-semibold text-lg'>
