@@ -51,8 +51,15 @@ const Navbar = () => {
                     <ul className='flex items-center gap-6 font-semibold text-lg'>
                         <li className="group">
                             <div className="flex items-center gap-1 cursor-pointer">
-                                <button className={`hover:cursor-pointer ${pathName === "/instant-cash-loan" ? "text-[#079f9f]" : "text-black"
-                                    }`}>Loans</button>
+                                <button
+                                    className={`hover:cursor-pointer ${pathName === "/instant-cash-loan" || pathName === "/personal-loan"
+                                            ? "text-[#079f9f]"
+                                            : "text-black"
+                                        }`}
+                                >
+                                    Loans
+                                </button>
+
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="12"
@@ -65,7 +72,7 @@ const Navbar = () => {
                                 <ul className="absolute right-[39vw] mt-64 bg-white rounded-xl shadow-xl z-50 w-96 p-4 space-y-4 text-sm transform scale-y-0 opacity-0 origin-top lg:transition duration-300 lg:duration-150 ease-out lg:ease-in-out lg:origin-top  lg:shadow-lg group-hover:scale-y-100 group-hover:opacity-100">
 
                                     {/* Item 1 - Instant Cash Loan */}
-                                    <li className="group/item flex items-start gap-3 p-2 rounded-lg transition-all cursor-pointer hover:bg-[rgb(254,249,235)]">
+                                    <a href='/instant-cash-loan' className="group/item flex items-start gap-3 p-2 rounded-lg transition-all cursor-pointer hover:bg-[rgb(254,249,235)]">
 
                                         {/* Icon */}
                                         <div className="text-orange-500 mt-1">
@@ -74,7 +81,7 @@ const Navbar = () => {
 
                                         {/* Text */}
                                         <div className="flex-1">
-                                            <a href='/instant-cash-loan' className="font-semibold text-black flex justify-between items-center">
+                                            <div className="font-semibold text-black flex justify-between items-center">
                                                 Instant Cash Loan
                                                 <span className="text-black mr-[10vw] inline-block transform transition-transform duration-300 ease-in-out group-hover/item:translate-x-2">
                                                     →
@@ -82,13 +89,13 @@ const Navbar = () => {
 
 
 
-                                            </a>
+                                            </div>
                                             <p className="text-gray-500 mt-1">Get quick cash loans of up to ₹5 lacs in 2 minutes</p>
                                         </div>
-                                    </li>
+                                    </a>
 
                                     {/* Item 2 - Personal Loan */}
-                                    <li className="group/item flex items-start gap-3 p-2 rounded-lg transition-all cursor-pointer hover:bg-[rgb(254,249,235)]">
+                                    <a href='/personal-loan' className="group/item flex items-start gap-3 p-2 rounded-lg transition-all cursor-pointer hover:bg-[rgb(254,249,235)]">
                                         {/* Icon */}
                                         <div className="text-orange-500 mt-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path stroke="#333" strokeLinejoin="round" strokeWidth="1.5" d="M5.632 11.103A6 6 0 0 1 11.325 7h1.35a6 6 0 0 1 5.692 4.103l1 3C20.663 17.988 17.771 22 13.675 22h-3.35c-4.096 0-6.988-4.012-5.693-7.897l1-3Z"></path><path stroke="#333" strokeLinejoin="round" strokeWidth="1.5" d="M14.086 7H9.914L8.513 5.393c-1.373-1.575.229-3.93 2.234-3.283l.928.3c.211.067.439.067.65 0l.928-.3c2.005-.647 3.607 1.708 2.234 3.283L14.086 7Z"></path><path stroke="#F8A63F" strokeLinecap="round" strokeWidth="1.5" d="M9 17c2.254 1.315 3.578 1.345 6 0"></path></svg>
@@ -104,7 +111,7 @@ const Navbar = () => {
                                             </div>
                                             <p className="text-gray-500 mt-1">Avail of a Personal Loan at 0 preclosure charges</p>
                                         </div>
-                                    </li>
+                                    </a>
                                 </ul>
 
                             </div>
