@@ -11,6 +11,96 @@ import LoanAmountSection from "@/components/information/LoanAmountSection";
 import FAQs from "@/components/FAQs/FAQs";
 import Reviews from "@/components/reviews/Reviews";
 import DownloadApp from "@/components/downloadApp/DownloadApp";
+import SubNavbar from "@/components/navbars/SubNavbar";
+import FactorsAffecting from "@/components/instant-cash-loan/FactorsAffecting";
+import Blogs from "@/components/blogs/Blogs";
+import HowToManage from "@/components/instant-cash-loan/HowToManage";
+
+
+const navbarItems = [
+  {
+    name: "EMI calculator",
+    href: "/"
+  },
+  {
+    name: "How to apply",
+    href: "/"
+  },
+  {
+    name: "Check eligibilty",
+    href: "/"
+  },
+  {
+    name: "Documents required",
+    href: "/"
+  },
+  {
+    name: "Fees & charges",
+    href: "/"
+  },
+  {
+    name: "Instant cash loan features",
+    href: "/"
+  },
+  {
+    name: "FAQs",
+    href: "/"
+  },
+  {
+    name: "Blogs",
+    href: "/"
+  },
+  {
+    name: "Download app",
+    href: "/"
+  },
+  {
+    name: "Testimonials",
+    href: "/"
+  },
+]
+
+const blogsData = [
+  {
+    id: 1,
+    type: 'Instant Cash Loan',
+    date: '13 May 2025',
+    title: 'How to Make Advance EMI Payment Online: A Detailed Guide',
+    description:
+      "EMIs make loan repayments easy by spreading them across monthly instalments. But what if you have some extra funds and want to pay more — or even finish your loan sooner? That&apos;s when the question arises: &apos;Can I pay EMIs in advance?&apos; Yes, many lenders allow advance EMI payments or prepayments — often through simple online … ",
+    image:
+      'https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2024%2F05%2FHow-to-Make-Advance-EMI-Payment-Online.jpg&w=384&q=100',
+    readTime: '3 mins read',
+    layout: 'main',
+  },
+  {
+    id: 2,
+    type: 'Instant Cash Loan',
+    date: '4 Mar 2025',
+    title: 'iPhone on EMI: How to buy, chose the model and finance your purchase',
+    description:
+      'Today you can finance an iPhone via affordable EMIs both online and offline with ease. Many lenders in India offer a plethora of short-term loans or credit card options that you can use to buy your iPhone.  With so many options, choosing one can be difficult, especially when you want to buy an Apple iPhone … ',
+    image:
+      'https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F11%2FBuy-iPhone-on-EMI.jpg&w=384&q=100',
+    readTime: '3 mins read',
+    layout: 'side',
+  },
+  {
+    id: 3,
+    type: 'Instant Cash Loan',
+    date: '8 Nov 2025',
+    title: 'Learn How to Buy a TV Under ₹20,000 on Affordable, Pocket-friendly EMIs',
+    description:
+      'When looking to buy a TV under ₹20,000, it is vital that you research your options. Most of these TVs have smart features offering internet connectivity, OTT subscription, voice assistance and more. Some models also have outstanding visual and audio quality, and you have many options to choose from.  Moreover, you can pay for a … ',
+    image:
+      'https://www.fibe.in/_next/image/?url=https%3A%2F%2Faltcont.fibe.in%2Fwp-content%2Fuploads%2F2023%2F11%2FBuy-smart-TV-under-Rs.20000.jpg&w=384&q=100',
+    readTime: '3 mins read',
+    layout: 'side',
+  },
+];
+
+
+
 const page = () => {
   const [formdata, setFormData] = useState("");
   const LoanSectionTitle = "How to Get Instant Loan Online?";
@@ -222,6 +312,8 @@ const page = () => {
 
   return (
     <div>
+      <SubNavbar items={navbarItems} />
+
       <section className="w-full px-6 lg:px-8 flex bg-gradient-to-t from-[#FFF3F78F] to-[#EBFFFF91]">
         <div className="w-full mt-10 lg:mt-16 pt-16 pb-0 flex-col lg:flex-row lg:flex gap-0 lg:gap-4 container">
           <div className="w-full lg:w-[60%] container lg:mb-20">
@@ -460,7 +552,7 @@ const page = () => {
         }
         showButton={false}
       />
-
+      <FactorsAffecting />
       <section
         className="px-6 lg:px-8 pt-20 pb-8 lg:pt-[130px] lg:pb-[82px]"
         id="documents"
@@ -505,13 +597,16 @@ const page = () => {
           </div>
         </div>
       </section>
-      <WhiteCardSection title={whiteCardTitle} description={whiteCardDescription} cardData={whiteCardData}/>
-      <LoanAmountSection/>
-      <FAQs FAQS={FAQS}/>
+      <WhiteCardSection title={whiteCardTitle} description={whiteCardDescription} cardData={whiteCardData} />
+      <HowToManage />
+      <LoanAmountSection />
+      <FAQs FAQS={FAQS} />
 
 
-        <Reviews/>
-        <DownloadApp/>
+      
+      <Blogs data={blogsData} heading={"Instant Cash Loan Blogs"} />
+      <Reviews />
+      <DownloadApp />
 
     </div>
   );

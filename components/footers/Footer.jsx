@@ -1,20 +1,28 @@
 'use client';
-import { useEffect, useState } from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
+import { useEffect, useState, useRef } from 'react';
+
 
 const Footer = () => {
-
-    const [visible, setVisible] = useState(false);
     const [phone, setPhone] = useState('');
-    const [sentToTop, setSentToTop] = useState(false)
+    const [visible, setVisible] = useState(false);
+    
+
+    const scrollingRef = useRef(false); // <-- NEW: track if scrolling to top
+
+    const handleChange = (e) => {
+        const value = e.target.value;
+        const digitsOnly = value.replace(/\D/g, '');
+        if (digitsOnly.length <= 10) {
+            setPhone(digitsOnly);
+        }
+    };
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollThreshold = window.innerHeight;
+            if (scrollingRef.current) return; // <-- ignore scroll updates while scrolling to top
 
-            if (sentToTop) {
-                setVisible(window.scrollY < 1);
-            }
+            const scrollThreshold = window.innerHeight;
             setVisible(window.scrollY > scrollThreshold);
         };
 
@@ -22,32 +30,19 @@ const Footer = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const handleClick = () => {
+        scrollingRef.current = true; // <-- set flag
 
+        setVisible(true); // make visible immediately
 
-    const handleChange = (e) => {
-        const value = e.target.value;
-
-        // Remove non-digits
-        const digitsOnly = value.replace(/\D/g, '');
-
-        // Limit to 10 digits
-        if (digitsOnly.length <= 10) {
-            setPhone(digitsOnly);
-        }
-    };
-
-    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-
-
-    const handleClick = async () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
-        // Wait 3 seconds
-        await sleep(750);
-
-        setSentToTop(true);
-        setVisible(true);
-    };
+        // Wait for scroll to complete (typically 500–1000ms for smooth scroll)
+        setTimeout(() => {
+            scrollingRef.current = false; // <-- reset flag
+            setVisible(true); // optionally hide after scroll to top, or check `scrollY`
+        }, 800);
+    }
 
 
     const handleClickPlay = () => {
@@ -57,6 +52,8 @@ const Footer = () => {
     const handleClickApp = () => {
         window.open("https://apps.apple.com/in/app/fibe-instant-personal-loan-app/id1094602630", "_blank", "noopener,noreferrer");
     };
+
+
     return (
         <div className='mt-2'>
             <div className='flex justify-center items-center'>

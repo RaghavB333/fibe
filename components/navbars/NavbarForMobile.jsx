@@ -2,11 +2,14 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation';
 
 const NavbarForMobile = () => {
     const [showHamburger, setShowHamburger] = useState(false)
     const [animateSidebar, setAnimateSidebar] = useState(false)
-    const [activeDropdown, setActiveDropdown] = useState(null) // State for which dropdown is open
+    const [activeDropdown, setActiveDropdown] = useState(null)
+    const pathName = usePathname();
+   
 
     // Effect for main sidebar animation
     useEffect(() => {
@@ -17,7 +20,7 @@ const NavbarForMobile = () => {
             return () => clearTimeout(timer);
         } else {
             setAnimateSidebar(false);
-            
+
             setActiveDropdown(null);
         }
     }, [showHamburger]);
@@ -39,12 +42,12 @@ const NavbarForMobile = () => {
             {/* Navbar */}
             <nav className='fixed z-[9997] w-full top-0 flex justify-between items-center px-8 bg-gradient-to-t from-[#FFF1F5] to-[#FFF8ED] shadow-lg'>
                 <div className='pb-5 pt-4 pl-5 '>
-                    <Link href="https://www.fibe.in/">
+                    <Link href="/">
                         <Image priority width={50} height={50} src="https://www.fibe.in/fibe-india.svg" alt="fibe-logo" />
                     </Link>
                 </div>
                 <div className='flex gap-3 items-center'>
-                    <span className='font-semibold'>Get App</span>
+                    <span className='font-semibold mt-1'>Get App</span>
                     <Image priority src="https://www.fibe.in/icons/apple.svg" width={16} height={16} alt='apple logo' />
                     <Image priority src="https://www.fibe.in/icons/google-play.svg" width={16} height={16} alt='playstore logo' className='mt-1' />
                     <Image
@@ -86,7 +89,8 @@ const NavbarForMobile = () => {
                             </div>
                             <div className='flex flex-col gap-3'>
                                 {/* Loans Dropdown */}
-                                <button onClick={() => setActiveDropdown(activeDropdown === 'loans' ? null : 'loans')} className='flex items-center gap-2 group cursor-pointer'>
+                                <button onClick={() => setActiveDropdown(activeDropdown === 'loans' ? null : 'loans')} className={`flex items-center gap-2 group cursor-pointer ${pathName === "/instant-cash-loan" ? "text-[#079f9f]" : "text-black"
+                                    }`}>
                                     Loans
                                     <span>
                                         <svg
@@ -109,7 +113,7 @@ const NavbarForMobile = () => {
                                 >
                                     <div className='flex gap-2'>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><rect width="4" height="12" x="20" y="4" stroke="#333" strokeWidth="1.5" rx="2" transform="rotate(90 20 4)"></rect><rect width="4" height="12" x="20" y="12" stroke="#333" strokeWidth="1.5" rx="2" transform="rotate(90 20 12)"></rect><rect width="4" height="12" x="16" y="8" stroke="#F8A63F" strokeWidth="1.5" rx="2" transform="rotate(90 16 8)"></rect><rect width="4" height="12" x="17" y="16" stroke="#F8A63F" strokeWidth="1.5" rx="2" transform="rotate(90 17 16)"></rect></svg>
-                                        <span>Instant Cash Loan →</span>
+                                        <a href='/instant-cash-loan'>Instant Cash Loan →</a>
                                     </div>
                                     <div className='flex gap-2'>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path stroke="#333" strokeLinejoin="round" strokeWidth="1.5" d="M5.632 11.103A6 6 0 0 1 11.325 7h1.35a6 6 0 0 1 5.692 4.103l1 3C20.663 17.988 17.771 22 13.675 22h-3.35c-4.096 0-6.988-4.012-5.693-7.897l1-3Z"></path><path stroke="#333" strokeLinejoin="round" strokeWidth="1.5" d="M14.086 7H9.914L8.513 5.393c-1.373-1.575.229-3.93 2.234-3.283l.928.3c.211.067.439.067.65 0l.928-.3c2.005-.647 3.607 1.708 2.234 3.283L14.086 7Z"></path><path stroke="#F8A63F" strokeLinecap="round" strokeWidth="1.5" d="M9 17c2.254 1.315 3.578 1.345 6 0"></path></svg>
