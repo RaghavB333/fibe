@@ -24,7 +24,9 @@ const NavbarForTouchLargeScreens = () => {
             <ul className='flex items-center gap-6 font-semibold text-lg'>
                 <li className="group">
                     <div className="flex items-center gap-1 cursor-pointer">
-                        <button onClick={() => setActiveDropdown(activeDropdown === 'loans' ? null : 'loans')} className={`hover:cursor-pointer ${pathName === "/instant-cash-loan" ? "text-[#079f9f]" : "text-black"
+                        <button onClick={() => setActiveDropdown(activeDropdown === 'loans' ? null : 'loans')} className={`hover:cursor-pointer ${pathName === "/instant-cash-loan" || pathName === "/personal-loan"
+                            ? "text-[#079f9f]"
+                            : "text-black"
                             }`}>Loans</button>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -60,12 +62,12 @@ const NavbarForTouchLargeScreens = () => {
 
 
                                     </a>
-                                    <p className="text-gray-500 mt-1">Get quick cash loans of up to ₹5 lacs in 2 minutes</p>
+                                    <p className='text-gray-500 font-extralight text-[12px] mt-1'>Get quick cash loans of up to ₹5 lacs in 2 minutes</p>
                                 </div>
                             </li>
 
                             {/* Item 2 - Personal Loan */}
-                            <li className="group/item flex items-start gap-3 p-2 rounded-lg transition-all cursor-pointer hover:bg-[rgb(254,249,235)]">
+                            <a href='/personal-loan' className="group/item flex items-start gap-3 p-2 rounded-lg transition-all cursor-pointer hover:bg-[rgb(254,249,235)]">
                                 {/* Icon */}
                                 <div className="text-orange-500 mt-1">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path stroke="#333" strokeLinejoin="round" strokeWidth="1.5" d="M5.632 11.103A6 6 0 0 1 11.325 7h1.35a6 6 0 0 1 5.692 4.103l1 3C20.663 17.988 17.771 22 13.675 22h-3.35c-4.096 0-6.988-4.012-5.693-7.897l1-3Z"></path><path stroke="#333" strokeLinejoin="round" strokeWidth="1.5" d="M14.086 7H9.914L8.513 5.393c-1.373-1.575.229-3.93 2.234-3.283l.928.3c.211.067.439.067.65 0l.928-.3c2.005-.647 3.607 1.708 2.234 3.283L14.086 7Z"></path><path stroke="#F8A63F" strokeLinecap="round" strokeWidth="1.5" d="M9 17c2.254 1.315 3.578 1.345 6 0"></path></svg>
@@ -79,9 +81,9 @@ const NavbarForTouchLargeScreens = () => {
                                             →
                                         </span>
                                     </div>
-                                    <p className="text-gray-500 mt-1">Avail of a Personal Loan at 0 preclosure charges</p>
+                                    <p className='text-gray-500 font-extralight text-[12px] mt-1'>Avail of a Personal Loan at 0 preclosure charges</p>
                                 </div>
-                            </li>
+                            </a>
                         </ul>
 
                     </div>
@@ -137,7 +139,7 @@ const NavbarForTouchLargeScreens = () => {
                                                 →
                                             </span>
                                         </div>
-                                        <div className='text-gray-400 font-light text-[12px] lg:pl-2'>Borrow using mutual funds holdings in minutes</div>
+                                        <div className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>Borrow using mutual funds holdings in minutes</div>
 
                                     </div>
                                 </Link>
@@ -165,7 +167,7 @@ const NavbarForTouchLargeScreens = () => {
                                                 →
                                             </span>
                                         </div>
-                                        <span className='text-gray-400 font-light text-[12px] lg:pl-2'>Easy financing for you employees instant cash needs</span>
+                                        <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>Easy financing for you employees instant cash needs</span>
                                     </div>
                                 </Link>
                                 <span>Credit Card</span>
@@ -180,7 +182,7 @@ const NavbarForTouchLargeScreens = () => {
                                                 →
                                             </span>
                                         </div>
-                                        <span className='text-gray-400 font-light text-[12px] lg:pl-2'>Go numberless with Fibe Axis Bank Credit Card</span>
+                                        <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>Go numberless with Fibe Axis Bank Credit Card</span>
                                     </div>
 
                                 </Link>
@@ -204,7 +206,7 @@ const NavbarForTouchLargeScreens = () => {
                                                 →
                                             </span>
                                         </div>
-                                        <span className='text-gray-400 font-light text-[12px] lg:pl-2'>Access the best of Healthcare on EMIs</span>
+                                        <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>Access the best of Healthcare on EMIs</span>
                                     </div>
                                 </Link>
                                 <Link href={"/"} className='flex  hover:bg-[rgb(254,249,235)] p-1 rounded-lg group/item'>
@@ -215,7 +217,7 @@ const NavbarForTouchLargeScreens = () => {
                                                 →
                                             </span>
                                         </div>
-                                        <span className='text-gray-400 font-light text-[12px] lg:pl-2'>Fuel your aspirations with the latest upskilling courses on EMIs</span>
+                                        <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>Fuel your aspirations with the latest upskilling courses on EMIs</span>
                                     </div>
                                 </Link>
                                 <Link href={"/"} className='flex  hover:bg-[rgb(254,249,235)] p-1 rounded-lg group/item'>
@@ -226,7 +228,7 @@ const NavbarForTouchLargeScreens = () => {
                                                 →
                                             </span>
                                         </div>
-                                        <span className='text-gray-400 font-light text-[12px] lg:pl-2'>Affordable loans to power your place with Solar Energy</span>
+                                        <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>Affordable loans to power your place with Solar Energy</span>
                                     </div>
                                 </Link>
                             </div>
@@ -267,7 +269,7 @@ const NavbarForTouchLargeScreens = () => {
                                                 →
                                             </span>
                                         </div>
-                                        <span className='text-gray-400 font-light text-[12px] lg:pl-2'>Get EMI amount, repayment tenure and interest rate beforehand</span>
+                                        <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>Get EMI amount, repayment tenure and interest rate beforehand</span>
                                     </div>
                                 </Link>
                                 <Link href={"/"} className='flex  hover:bg-[rgb(254,249,235)] p-1 rounded-lg group/item'>
@@ -278,7 +280,7 @@ const NavbarForTouchLargeScreens = () => {
                                                 →
                                             </span>
                                         </div>
-                                        <span className='text-gray-400 font-light text-[12px] lg:pl-2'>
+                                        <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>
                                             Know EMI Loan amount in seconds to plan your finances better
                                         </span>
                                     </div>
@@ -296,7 +298,7 @@ const NavbarForTouchLargeScreens = () => {
                                                 →
                                             </span>
                                         </div>
-                                        <span className='text-gray-400 font-light text-[12px] lg:pl-2'>Easy-to-use calculator to know your loan eligibilty in seconds</span>
+                                        <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>Easy-to-use calculator to know your loan eligibilty in seconds</span>
                                     </div>
                                 </Link>
                                 <Link href={"/"} className='flex  hover:bg-[rgb(254,249,235)] p-1 rounded-lg group/item'>
@@ -307,7 +309,7 @@ const NavbarForTouchLargeScreens = () => {
                                                 →
                                             </span>
                                         </div>
-                                        <span className='text-gray-400 font-light text-[12px] lg:pl-2'>
+                                        <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>
                                             Get your credit score for free before applying for a loan
                                         </span>
                                     </div>
@@ -351,7 +353,7 @@ const NavbarForTouchLargeScreens = () => {
                                             →
                                         </span>
                                     </div>
-                                    <span className='text-gray-400 font-light text-[12px] lg:pl-2'>Read about all things finance and insightful things to be financially healthy</span>
+                                    <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>Read about all things finance and insightful things to be financially healthy</span>
                                 </div>
                             </Link>
                             <Link href={"/"} className='flex  hover:bg-[rgb(254,249,235)] p-1 rounded-lg group/item'>
@@ -362,7 +364,7 @@ const NavbarForTouchLargeScreens = () => {
                                             →
                                         </span>
                                     </div>
-                                    <span className='text-gray-400 font-light text-[12px] lg:pl-2'>
+                                    <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>
                                         Get all financial terms, formulas, concepts or theories you are searching for
                                     </span>
                                 </div>
@@ -408,7 +410,7 @@ const NavbarForTouchLargeScreens = () => {
                                                 →
                                             </span>
                                         </div>
-                                        <span className='text-gray-400 font-light text-[12px] lg:pl-2'>Fibe is India's largest lending platform that offers instant credit solutions</span>
+                                        <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>Fibe is India's largest lending platform that offers instant credit solutions</span>
                                     </div>
                                 </Link>
                                 <Link href={"/"} className='flex  hover:bg-[rgb(254,249,235)] p-1 rounded-lg group/item'>
@@ -419,7 +421,7 @@ const NavbarForTouchLargeScreens = () => {
                                                 →
                                             </span>
                                         </div>
-                                        <span className='text-gray-400 font-light text-[12px] lg:pl-2'>
+                                        <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>
                                             Explore jobs at Fibe that best suits your passion and dreams
                                         </span>
                                     </div>
@@ -437,7 +439,7 @@ const NavbarForTouchLargeScreens = () => {
                                                 →
                                             </span>
                                         </div>
-                                        <span className='text-gray-400 font-light text-[12px] lg:pl-2'>Know about our news related products, industry updates, announcements etc.</span>
+                                        <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>Know about our news related products, industry updates, announcements etc.</span>
                                     </div>
                                 </Link>
                                 <Link href={"/"} className='flex  hover:bg-[rgb(254,249,235)] p-1 rounded-lg group/item'>
@@ -448,7 +450,7 @@ const NavbarForTouchLargeScreens = () => {
                                                 →
                                             </span>
                                         </div>
-                                        <span className='text-gray-400 font-light text-[12px] lg:pl-2'>
+                                        <span className='text-gray-500 font-extralight text-[12px] mt-1 pl-2'>
                                             Reach us via different channels for your concerns and get instant help
                                         </span>
                                     </div>

@@ -16,7 +16,6 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import Popup from "@/components/popup/Popup";
 
 
 const blogsData = [
@@ -321,7 +320,6 @@ export default function Home() {
 
             </div>
           </div>
-          <Popup />
           <Reviews />
           <DownloadApp />
           <Blogs data={blogsData} heading={"Fibe Blogs"}/>
