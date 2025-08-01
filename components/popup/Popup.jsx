@@ -9,12 +9,12 @@ const Popup = () => {
     useEffect(() => {
         if (typeof window === "undefined") return;
 
-        const shouldShow = Math.random() < 0.5;
+        const shouldShow = Math.random() < 0.1;
 
         if (!shouldShow) return;
 
         // 2. Random delay between 3 to 10 seconds
-        const delay = Math.floor(Math.random() * (10000 - 3000 + 1)) + 3000;
+        const delay = Math.floor(Math.random() * (15000 - 9000 + 1)) + 3000;
 
         const timer = setTimeout(() => {
             setShowPopUp(true);
